@@ -1,6 +1,7 @@
-# Revive HDESK
+# Revive HDESK![logo_rv_hdesk](https://user-images.githubusercontent.com/1161809/164566811-32305752-9625-4f91-a001-1f7fcea895b6.png)
 
 Sample app for learn Laravel framework.
+
 
 ### Main idea
 This application is created in order to learn the basics of the Laravel framework and at the same time solve some practical problem for myself.
