@@ -1,4 +1,4 @@
-![logo_rv_hdesk](https://user-images.githubusercontent.com/1161809/164566811-32305752-9625-4f91-a001-1f7fcea895b6.png)
+<img align="right" src="https://user-images.githubusercontent.com/1161809/164566811-32305752-9625-4f91-a001-1f7fcea895b6.png" >
 
 Sample app for learn Laravel framework.
 
