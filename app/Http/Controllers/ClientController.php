@@ -1,26 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Controller;
 
 use App\Models\Client;
-
+use App\Models\Account;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Controller;
 
 class ClientController extends Controller
 {
     //
     public function index()
     {
+        //$accounts = Account::find(1);
         $clients = Client::all();
+        //dd($accounts->client);
+        //$clients = Client::where('account_id', $accounts->id)->get();
         //dump($clients);
         return view('client.index', compact('clients'));
 
     }
-    public function create() {
-        {
-            return view('client.create');
-        }
+
+    public function create()
+    {
+            $accounts = Account::all();
+            return view('client.create', compact('accounts'));
     }
 
     public function store(): RedirectResponse
@@ -38,12 +42,14 @@ class ClientController extends Controller
         return redirect()->route('client.index');
     }
 
-    public function show(Client $client) {
+    public function show(Client $client)
+    {
         //dd($client->name);
         return view('client.show', compact('client'));
     }
 
-    public function edit(Client $client) {
+    public function edit(Client $client)
+    {
         // dd($client->name);
         return view('client.edit', compact('client'));
     }

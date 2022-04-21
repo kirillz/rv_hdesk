@@ -37,6 +37,14 @@
                     <label for="postal_code" class="form-label">Почтовый индекс</label>
                     <input type="text" name="postal_code" class="form-control" id="postal_code" placeholder="Почтовый индекс">
                 </div>
+                <div class="col-md-4">
+                    <label for="account_id" class="form-label">Счет</label>
+                    <select class="form-select" id="account_id" aria-label="Счет">
+                        @foreach($accounts as $account)
+                        <option value="{{ $account->id }}">{{ $account->name }}</option>
+                        @endforeach
+                </select>
+                </div>
                 <div class="col-12">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">

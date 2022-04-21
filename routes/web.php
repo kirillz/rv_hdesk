@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Public pages
-// Route::get('/',  'HomeController@index')->name('home.index');
-
-
+Route::get('/',  'HomeController@index')->name('home.index');
 
 // Client CRUD
 Route::get('/clients', 'ClientController@index')->name('client.index');
