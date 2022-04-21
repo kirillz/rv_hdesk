@@ -1,4 +1,8 @@
 {
+    "name": "rv_hdesk",
+    "author": "KirillZ <kzasorin@gmail.com> (https://revive-it.ru)",
+    "version": "1.0.0",
+    "description": "Simple laravel application",
     "private": true,
     "scripts": {
         "dev": "npm run development",
