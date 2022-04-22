@@ -19,8 +19,8 @@ class Client extends Model
     protected $table = 'client';
     protected $guarded = false;
 
-    public function accounts(): HasMany
+    public function invoices(): HasMany
     {
-        return $this->hasMany(Account::class);
+        return $this->hasMany(Invoice::class);
     }
 }

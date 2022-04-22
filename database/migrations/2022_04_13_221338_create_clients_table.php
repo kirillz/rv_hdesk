@@ -17,6 +17,7 @@ class CreateClientsTable extends Migration
 
         Schema::create('client', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('invoice_id')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('address1')->nullable();
@@ -28,10 +29,10 @@ class CreateClientsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->unsignedBigInteger('account_id')->nullable();
-            $table->index('account_id', 'client_account_idx');
 
-            $table->foreign('account_id','client_account_fk')->on('accounts')->references('id');
+            $table->index('invoice_id', 'client_invoice_idx');
+
+            $table->foreign('invoice_id','client_invoice_fk')->on('invoices')->references('id');
         });
     }
 

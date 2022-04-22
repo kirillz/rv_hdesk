@@ -14,12 +14,9 @@
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('client.index') }}">Клиенты</a>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#">Pricing</a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link disabled">Disabled</a>--}}
-{{--                </li>--}}
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="{{ route('invoice.index') }}">Счета</a>
+                </li>
             </ul>
         </div>
     </div>
