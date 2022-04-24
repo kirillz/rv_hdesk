@@ -6,24 +6,26 @@ use App\Models\Client;
 use App\Models\Invoice;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
+use App\DataTables\ClientDataTable;
 
 class ClientController extends Controller
 {
     //
-    public function index()
+    public function index(ClientDataTable $dataTable)
     {
         //$invoices = Invoice::find(1);
         $clients = Client::all();
         //dd($invoices->client);
         //$clients = Client::where('invoice_id', $invoices->id)->get();
         //dump($clients);
-        return view('client.index', compact('clients'));
+        //return view('client.index', compact('clients'));
+        return $dataTable->render('client.index');
 
     }
 
     public function create()
     {
-            $invoices = Invoices::all();
+            $invoices = Invoice::all();
             return view('client.create', compact('invoices'));
     }
 

@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <h3>создание Счета</h3>
         <div class="row">
 
             <form action="{{ route('invoice.store') }}" method="post" class="row g-3">

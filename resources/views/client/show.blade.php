@@ -17,26 +17,13 @@
     </div>
     <div class="container">
         <div class="row">
-            <table class="table table-primary table-hover table-stripped">
-                <thead class="table-dark">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Имя</th>
-                    <th scope="col">Почта</th>
-                    <th scope="col">Адрес 1</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>{{ $client->id }}</td>
-                    <td>{{ $client->name }}</td>
-                    <td>{{ $client->email }}</td>
-                    <td>{{ $client->address1 }}</td>
-                </tr>
-                </tbody>
-            </table>
+            {{$dataTable->table()}}
 
         </div>
     </div>
 
 @endsection
+
+@push('scripts')
+    {{$dataTable->scripts()}}
+@endpush

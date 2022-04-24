@@ -60,7 +60,7 @@ class InvoiceController extends Controller
         return view('invoice.edit', compact('invoice'));
     }
 
-    public function update(Invoice $invoice)
+    public function update(Invoice $invoice): RedirectResponse
     {
         $data = request()->validate([
             'invoice_number' => 'string',
@@ -81,7 +81,7 @@ class InvoiceController extends Controller
         return redirect()->route('invoice.show', $invoice->id);
     }
 
-    public function destroy(Invoice $invoice)
+    public function destroy(Invoice $invoice): RedirectResponse
     {
         $invoice->delete();
         return redirect()->route('invoice.index');

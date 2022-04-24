@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <h3>создание Клиента</h3>
         <div class="row">
 
             <form action="{{ route('client.store') }}" method="post" class="row g-3">
@@ -40,8 +41,8 @@
                 <div class="col-md-4">
                     <label for="account_id" class="form-label">Счет</label>
                     <select class="form-select" id="account_id" aria-label="Счет">
-                        @foreach($accounts as $account)
-                        <option value="{{ $account->id }}">{{ $account->name }}</option>
+                        @foreach($invoices as $invoice)
+                        <option value="{{ $invoice->id }}">{{ $invoice->invoice_number }}</option>
                         @endforeach
                 </select>
                 </div>

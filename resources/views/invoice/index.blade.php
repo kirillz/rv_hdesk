@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="mb-4">
+        <h3>Счета</h3>
         <div class="shadow p-3 mb-5 bg-body rounded">
             <a class="btn btn-outline-dark" href="{{ route('invoice.create') }}">+ Создать</a>
         </div>

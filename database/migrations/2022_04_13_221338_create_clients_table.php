@@ -32,7 +32,7 @@ class CreateClientsTable extends Migration
 
             $table->index('invoice_id', 'client_invoice_idx');
 
-            $table->foreign('invoice_id','client_invoice_fk')->on('invoices')->references('id');
+           // $table->foreign('invoice_id','client_invoice_fk')->on('invoices')->references('id');
         });
     }
 
