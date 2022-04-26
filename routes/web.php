@@ -35,3 +35,6 @@ Route::get('/invoices/{invoice}', 'InvoiceController@show')->name('invoice.show'
 Route::get('/invoices/{invoice}/edit', 'InvoiceController@edit')->name('invoice.edit');
 Route::patch('/invoices/{invoice}', 'InvoiceController@update')->name('invoice.update');
 Route::delete('/invoices/{invoice}', 'InvoiceController@destroy')->name('invoice.delete');
+
+// Tasks CRUD
+Route::get('/tasks','TaskController@index')->name('task.index');
