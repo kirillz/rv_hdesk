@@ -8,7 +8,7 @@
 {{--    </div>--}}
     <div class="container">
         <div class="row">
-            <h3>Клиенты</h3>
+
             {{$dataTable->table()}}
 {{--            @foreach($clients as $client)--}}
 {{--                <div>{{ $client->id }}.<a href="{{ route('client.show', $client->id) }}"> {{ $client->name }}</a></div>--}}
