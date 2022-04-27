@@ -19,10 +19,17 @@ class ClientDataTable extends DataTable
      */
     public function dataTable($query): \Yajra\DataTables\DataTableAbstract
     {
+        $client = Client::all();
         return datatables()
             ->eloquent($query)
-            //TODO: Need help here, we need button and link to client.edit
-            ->addColumn('action', 'client.action');
+
+            //->addColumn('action', 'client.action');
+            ->addColumn('action', function($row){
+                // FIXME: Need help here, we need button link but not working
+                $btn = '<a href="{{ route(client.show , $client->id) }}" class="btn btn-outline-secondary btn-sm">Ред.</a>';
+                return $btn;
+            })
+            ->rawColumns(['action']);
     }
 
     /**

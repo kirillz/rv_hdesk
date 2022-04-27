@@ -13,4 +13,5 @@ class HomeController extends Controller
         return view('home');
     }
 //TODO: тут нужен Chart.js график  линейный с суммой доходов за год месяц неделю день
+// TODO: we need 404 page
 }

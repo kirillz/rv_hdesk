@@ -19,10 +19,15 @@ class InvoiceDataTable extends DataTable
      */
     public function dataTable($query): \Yajra\DataTables\DataTableAbstract
     {
+        $invoice = Invoice::all();
         return datatables()
             ->eloquent($query)
-            //TODO: Need help here, we need button and link to invoice.edit
-            ->addColumn('action', 'invoice.action');
+            ->addColumn('action', function($row){
+                // FIXME: Need help here, we need button link but not working
+                $btn = '<a href="{{ route(invoices.show , invoice->id) }}" class="btn btn-outline-secondary btn-sm">Ред.</a>';
+                return $btn;
+            })
+            ->rawColumns(['action']);
     }
 
     /**
