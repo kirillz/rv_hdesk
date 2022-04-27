@@ -12,6 +12,10 @@
                     <input type="text" name="name" value="{{ $client->name }}" class="form-control" id="name" placeholder="Имя">
                 </div>
                 <div class="col-md-6">
+                    <label for="email" class="form-label">Почта</label>
+                    <input type="text" name="email" value="{{ $client->name }}" class="form-control" id="email" placeholder="Почта">
+                </div>
+                <div class="col-md-6">
                     <label for="city" class="form-label">Город</label>
                     <input type="text" name="city" value="{{ $client->city }}" class="form-control" id="city" placeholder="Город">
                 </div>
@@ -43,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <a class="btn btn-outline-danger" href="{{ route('client.show', $client->id) }}">Отменить</a>
+                    <a class="btn btn-outline-danger" href="{{ route('client.index') }}">Отменить</a>
                     <button type="submit" class="btn btn-outline-success">Обновить</button>
 
                 </div>
