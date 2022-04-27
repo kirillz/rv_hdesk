@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\DataTables\ClientDataTable;
 use App\Models\Client;
 use App\Models\Invoice;
+use App\Models\Task;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+
+
 
 
 class TaskController extends Controller
@@ -24,8 +28,20 @@ class TaskController extends Controller
     }
     public function create()
     {
-        $task = Task::all();
+        $tasks = Task::all();
         return view('task.create', compact('tasks'));
+    }
+    public function store(): RedirectResponse
+    {
+        $data = request()->validate([
+            'name' => 'string',
+            'description' => 'string',
+            'ds' => 'string',
+            'descron' => 'string',
+        ]);
+        //dd($data);
+        Task::create($data);
+        return redirect()->route('client.index');
     }
 
 
