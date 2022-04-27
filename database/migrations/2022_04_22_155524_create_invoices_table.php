@@ -18,7 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->unsignedInteger('client_id')->index();
             //$table->unsignedInteger('account_id')->index();
 
-            $table->string('invoice_number');
+
             $table->float('discount');
             $table->string('pers_order_number');
             $table->date('invoice_date')->nullable();
