@@ -17,19 +17,14 @@ class ClientDataTable extends DataTable
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
      */
-    public function dataTable($query): \Yajra\DataTables\DataTableAbstract
+    public function dataTable($query)
     {
-        $client = Client::all();
-        return datatables()
+          return datatables()
             ->eloquent($query)
-
-            //->addColumn('action', 'client.action');
-            ->addColumn('action', function($row){
-                // FIXME: Need help here, we need button link but not working
-                $btn = '<a href="{{ route(client.show , $client->id) }}" class="btn btn-outline-secondary btn-sm">Ред.</a>';
-                return $btn;
-            })
-            ->rawColumns(['action']);
+            ->rawColumns(['action'])
+            ->addColumn('action', function(Client $client){
+                return '<a href="' . route('client.edit' , $client->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('client.delete' , $client->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            });
     }
 
     /**
@@ -77,7 +72,7 @@ class ClientDataTable extends DataTable
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(100)
                   ->addClass('text-center'),
             Column::make('id')->title('№'),
             Column::make('name')->title('Клиент'),

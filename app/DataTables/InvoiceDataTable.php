@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+use App\Models\Client;
 use App\Models\Invoice;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
@@ -17,17 +18,14 @@ class InvoiceDataTable extends DataTable
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
      */
-    public function dataTable($query): \Yajra\DataTables\DataTableAbstract
+    public function dataTable($query)
     {
-        $invoice = Invoice::all();
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', function($row){
-                // FIXME: Need help here, we need button link but not working
-                $btn = '<a href="{{ route(invoices.show , invoice->id) }}" class="btn btn-outline-secondary btn-sm">Ред.</a>';
-                return $btn;
-            })
-            ->rawColumns(['action']);
+            ->rawColumns(['action'])
+            ->addColumn('action', function(Invoice $invoice){
+                return '<a href="' . route('invoice.edit' , $invoice->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('invoice.delete' , $invoice->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            });
     }
 
     /**
@@ -75,7 +73,7 @@ class InvoiceDataTable extends DataTable
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(100)
                   ->addClass('text-center'),
             //Column::make('id'),
             Column::make('invoice_number')->title('№ Счета'),
