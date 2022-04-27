@@ -38,3 +38,11 @@ Route::delete('/invoices/{invoice}', 'InvoiceController@destroy')->name('invoice
 
 // Tasks CRUD
 Route::get('/tasks','TaskController@index')->name('task.index');
+Route::get('/tasks/create', 'TaskController@create')->name('task.create');
+Route::post('/tasks', 'TaskController@add')->name('task.add');
+Route::get('/tasks/{task}', 'TaskController@show')->name('task.show');
+// for update we need two route look at convention (https://laravel.com/docs/9.x/controllers#actions-handled-by-resource-controller)
+Route::get('/tasks/{task}/edit', 'TaskController@edit')->name('task.edit');
+Route::patch('/tasks/{task}', 'TaskController@update')->name('task.update');
+Route::delete('/tasks/{task}', 'TaskController@destroy')->name('task.delete');
+
