@@ -12,8 +12,8 @@ class CreateController extends Controller
 
         public function __invoke()
     {
-        $task = Task::all();
-        return view('task.create', compact('task'));
+        $tasks = Task::all();
+        return view('task.create', compact('tasks'));
     }
 
 }

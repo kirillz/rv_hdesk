@@ -45,10 +45,10 @@ Route::delete('/invoices/{invoice}', 'DestroyController')->name('invoice.delete'
 Route::group(['namespace' => 'Task'], function() {
     Route::get('/tasks', 'IndexController')->name('task.index');
     Route::get('/tasks/create', 'CreateController')->name('task.create');
-//    Route::post('/tasks', 'StoreController')->name('task.store');
-//    Route::get('/tasks/{invoice}', 'ShowController')->name('task.show');
+    Route::post('/tasks', 'StoreController')->name('task.store');
+    Route::get('/tasks/{invoice}', 'ShowController')->name('task.show');
 //// for update, we need two route look at convention (https://laravel.com/docs/9.x/controllers#actions-handled-by-resource-controller)
-//    Route::get('/tasks/{task}/edit', 'EditController')->name('task.edit');
-//    Route::patch('/tasks/{task}', 'UpdateController')->name('task.update');
-//    Route::delete('/tasks/{task}', 'DestroyController')->name('task.delete');
+    Route::get('/tasks/{task}/edit', 'EditController')->name('task.edit');
+    Route::patch('/tasks/{task}', 'UpdateController')->name('task.update');
+    Route::delete('/tasks/{task}', 'DestroyController')->name('task.delete');
 });
