@@ -10,7 +10,6 @@ class StoreController extends Controller
 {
     public function __invoke(): RedirectResponse
     {
-        // TODO: Implement __invoke() method.
         $data = request()->validate([
             'name' => 'string',
             'address1' => 'string',

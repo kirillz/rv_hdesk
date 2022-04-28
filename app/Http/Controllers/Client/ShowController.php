@@ -9,7 +9,6 @@ class ShowController extends Controller
 {
     public function __invoke(Client $client)
     {
-        // TODO: Implement __invoke() method.
         //dd($client->name);
         $clients = Client::all();
         return view('client.show', compact('clients'));

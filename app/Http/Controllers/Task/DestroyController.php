@@ -10,7 +10,6 @@ class DestroyController extends Controller
 {
     public function __invoke(Task $task): RedirectResponse
     {
-        // TODO: Implement __invoke() method.
         $task->delete();
         return redirect()->route('task.index');
     }

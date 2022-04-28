@@ -12,7 +12,6 @@ class CreateController extends Controller
 {
     public function __invoke()
     {
-        // TODO: Implement __invoke() method.
         $clients = Client::all();
         $invoices = Invoice::all();
         $tasks = Task::all();

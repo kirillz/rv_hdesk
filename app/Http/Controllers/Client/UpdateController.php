@@ -9,13 +9,13 @@ class UpdateController extends Controller
 {
     public function __invoke(Client $client): RedirectResponse
     {
-        // TODO: Implement __invoke() method.
         $data = request()->validate([
             'name' => 'string',
+            'email' => 'string',
             'address1' => 'string',
             'address2' => 'string',
-            'city' => 'string',
-            'state' => 'string',
+            //'city' => 'string',
+            //'state' => 'string',
             'postal_code' => 'integer',
         ]);
         //dd($data);
