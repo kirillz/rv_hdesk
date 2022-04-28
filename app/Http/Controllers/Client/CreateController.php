@@ -6,7 +6,7 @@ use App\Models\Invoice;
 use Illuminate\Routing\Controller;
 use App\DataTables\ClientDataTable;
 
-class createController extends Controller
+class CreateController extends Controller
 {
     public function __invoke()
     {

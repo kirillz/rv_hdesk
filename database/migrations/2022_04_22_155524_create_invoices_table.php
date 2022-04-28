@@ -13,14 +13,16 @@ class CreateInvoicesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('invoices');
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('client_id')->index()->nullable();
             //$table->unsignedInteger('account_id')->index();
 
 
-            $table->float('discount');
-            $table->string('pers_order_number');
+            $table->float('discount')->nullable();
+            $table->string('pers_order_number')->nullable();
+            $table->string('invoice_number')->nullable();
             $table->date('invoice_date')->nullable();
             $table->date('due_date')->nullable();
             $table->text('terms');
