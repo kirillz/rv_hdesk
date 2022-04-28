@@ -13,14 +13,16 @@ class CreateInvoicesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('invoices');
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('client_id')->index();
+            $table->unsignedInteger('client_id')->index()->nullable();
             //$table->unsignedInteger('account_id')->index();
 
 
-            $table->float('discount');
-            $table->string('pers_order_number');
+            $table->float('discount')->nullable();
+            $table->string('pers_order_number')->nullable();
+            $table->string('invoice_number')->nullable();
             $table->date('invoice_date')->nullable();
             $table->date('due_date')->nullable();
             $table->text('terms');
@@ -36,11 +38,11 @@ class CreateInvoicesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->string('tax_name1');
-            $table->decimal('tax_rate1', 13, 3);
+            $table->string('tax_name1')->nullable();
+            $table->decimal('tax_rate1', 13, 3)->nullable();
 
-            $table->decimal('amount', 13, 2);
-            $table->decimal('balance', 13, 2);
+            $table->decimal('amount', 13, 2)->nullable();
+            $table->decimal('balance', 13, 2)->nullable();
 
             $table->foreign('client_id')->references('id')->on('client')->onDelete('cascade');
             //$table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');

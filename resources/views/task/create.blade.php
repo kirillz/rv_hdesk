@@ -12,34 +12,29 @@
                     <input type="text" name="name" class="form-control" id="name" placeholder="Name Task">
                 </div>
                 <div class="col-md-6">
-                    <label for="name" class="form-label">Описание задачи</label>
+                    <label for="description" class="form-label">Описание задачи</label>
                     <input type="text" name="description" class="form-control" id="description" placeholder="Description">
                 </div>
-
-
-
-
-                        @foreach($tasks as $task)
-                            <option value="{{ $tasks->id }}">{{ $task->name }}</option>
-                        @endforeach
+                <select class="form-select" id="task_id" aria-label="Задача">
+                    @foreach($tasks as $task)
+                        <option value="{{ $tasks->id }}">{{ $task->name }}</option>
+                    @endforeach
                     </select>
-                </div>
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Чек ми ау
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-outline-dark">Создать</button>
-                </div>
-            </form>
 
-
-
-
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Чек ми ау
+                </label>
+            </div>
         </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-outline-dark">Создать</button>
+        </div>
+        </form>
+
+
+    </div>
     </div>
 @endsection

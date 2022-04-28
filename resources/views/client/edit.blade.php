@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <a class="btn btn-outline-danger" href="{{ route('client.show', $client->id) }}">Отменить</a>
+                    <a class="btn btn-outline-danger" href="{{ route('client.index') }}">Отменить</a>
                     <button type="submit" class="btn btn-outline-success">Обновить</button>
 
                 </div>

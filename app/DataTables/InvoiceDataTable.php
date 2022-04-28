@@ -3,13 +3,14 @@
 namespace App\DataTables;
 
 use App\Models\Client;
+use App\Models\Invoice;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class ClientDataTable extends DataTable
+class InvoiceDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -19,21 +20,21 @@ class ClientDataTable extends DataTable
      */
     public function dataTable($query)
     {
-          return datatables()
+        return datatables()
             ->eloquent($query)
             ->rawColumns(['action'])
-            ->addColumn('action', function(Client $client){
-                return '<a href="' . route('client.edit' , $client->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('client.delete' , $client->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            ->addColumn('action', function(Invoice $invoice){
+                return '<a href="' . route('invoice.edit' , $invoice->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('invoice.delete' , $invoice->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
             });
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Client $model
+     * @param \App\Models\Invoice $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Client $model): \Illuminate\Database\Eloquent\Builder
+    public function query(Invoice $model): \Illuminate\Database\Eloquent\Builder
     {
         return $model->newQuery();
     }
@@ -46,7 +47,7 @@ class ClientDataTable extends DataTable
     public function html(): \Yajra\DataTables\Html\Builder
     {
         return $this->builder()
-                    ->setTableId('client-table')
+                    ->setTableId('invoice-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
@@ -74,16 +75,16 @@ class ClientDataTable extends DataTable
                   ->printable(false)
                   ->width(100)
                   ->addClass('text-center'),
-            Column::make('id')->title('№'),
-            Column::make('name')->title('Клиент'),
-            Column::make('email')->title('Почта'),
-            Column::make('city')->title('Город'),
-            Column::make('address1')->title('Адрес 1'),
-            Column::make('address2')->title('Адрес 2'),
-            Column::make('state')->title('Регион'),
-            Column::make('postal_code')->title('Индекс'),
-            //Column::make('created_at')->title('Создан'),
-            //Column::make('updated_at')->title('Был обновлен'),
+            //Column::make('id'),
+            Column::make('invoice_number')->title('№ Счета'),
+            Column::make('discount')->title('Скидка(%)'),
+            Column::make('pers_order_number')->title('ID заказа'),
+            Column::make('invoice_date')->title('Дата создания'),
+            Column::make('start_date')->title('Дата начала работ'),
+            Column::make('end_date')->title('Дата окончания'),
+            Column::make('amount')->title('Кол-во'),
+            Column::make('balance')->title('Баланс счета'),
+
         ];
     }
 
@@ -94,6 +95,6 @@ class ClientDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Client_' . date('YmdHis');
+        return 'Invoice_' . date('YmdHis');
     }
 }

@@ -2,14 +2,13 @@
 
 namespace App\DataTables;
 
-use App\Models\Client;
+
+use App\Models\Task;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
-use Yajra\DataTables\Html\Editor\Editor;
-use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class ClientDataTable extends DataTable
+class TaskDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -19,21 +18,21 @@ class ClientDataTable extends DataTable
      */
     public function dataTable($query)
     {
-          return datatables()
+        return datatables()
             ->eloquent($query)
             ->rawColumns(['action'])
-            ->addColumn('action', function(Client $client){
-                return '<a href="' . route('client.edit' , $client->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('client.delete' , $client->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            ->addColumn('action', function(Task $task){
+                return '<a href="' . route('task.edit' , $task->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('task.delete' , $task->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
             });
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Client $model
+     * @param \App\Models\Task $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Client $model): \Illuminate\Database\Eloquent\Builder
+    public function query(Task $model)
     {
         return $model->newQuery();
     }
@@ -43,15 +42,16 @@ class ClientDataTable extends DataTable
      *
      * @return \Yajra\DataTables\Html\Builder
      */
-    public function html(): \Yajra\DataTables\Html\Builder
+    public function html()
     {
         return $this->builder()
-                    ->setTableId('client-table')
+                    ->setTableId('task-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
                     ->orderBy(1)
                     ->language(['url' => url('/vendor/datatables/lang/ru.json')])
+
                     ->buttons(
                         Button::make('create'),
                         Button::make('export'),
@@ -75,15 +75,11 @@ class ClientDataTable extends DataTable
                   ->width(100)
                   ->addClass('text-center'),
             Column::make('id')->title('№'),
-            Column::make('name')->title('Клиент'),
-            Column::make('email')->title('Почта'),
-            Column::make('city')->title('Город'),
-            Column::make('address1')->title('Адрес 1'),
-            Column::make('address2')->title('Адрес 2'),
-            Column::make('state')->title('Регион'),
-            Column::make('postal_code')->title('Индекс'),
-            //Column::make('created_at')->title('Создан'),
-            //Column::make('updated_at')->title('Был обновлен'),
+            Column::make('name')->title('Наименование задачи'),
+            Column::make('description')->title('Описание задачи'),
+            Column::make('terms')->title('Условия выполнения'),
+            Column::make('created_at'),
+            Column::make('updated_at'),
         ];
     }
 
@@ -92,8 +88,8 @@ class ClientDataTable extends DataTable
      *
      * @return string
      */
-    protected function filename(): string
+    protected function filename()
     {
-        return 'Client_' . date('YmdHis');
+        return 'Task_' . date('YmdHis');
     }
 }
