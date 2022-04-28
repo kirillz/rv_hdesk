@@ -77,11 +77,8 @@ class ClientDataTable extends DataTable
             Column::make('id')->title('№'),
             Column::make('name')->title('Клиент'),
             Column::make('email')->title('Почта'),
-            Column::make('city')->title('Город'),
             Column::make('address1')->title('Адрес 1'),
-            Column::make('address2')->title('Адрес 2'),
             Column::make('state')->title('Регион'),
-            Column::make('postal_code')->title('Индекс'),
             //Column::make('created_at')->title('Создан'),
             //Column::make('updated_at')->title('Был обновлен'),
         ];

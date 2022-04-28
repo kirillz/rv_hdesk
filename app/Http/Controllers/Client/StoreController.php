@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Client;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Client;
 use Illuminate\Routing\Controller;
-use App\DataTables\ClientDataTable;
+
 
 class StoreController extends Controller
 {

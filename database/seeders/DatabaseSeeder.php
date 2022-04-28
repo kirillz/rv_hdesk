@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\Client::factory(10)->create();
         \App\Models\Invoice::factory(10)->create();
-        \App\Models\Task::factory(10)->create();
+        // FIXME: Need factory here
+        //\App\Models\Task::factory(10)->create();
     }
 }

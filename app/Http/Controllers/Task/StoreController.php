@@ -1,26 +1,28 @@
 <?php
 
 namespace App\Http\Controllers\Task;
-
-use App\DataTables\TaskDataTable;
-use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
+use App\Models\Client;
 use App\Models\Task;
+use Illuminate\Routing\Controller;
 
 
 class StoreController extends Controller
 {
 
-        public function __invoke(TaskDataTable $dataTable)
-    {
+        public function __invoke(): RedirectResponse
+        {
         // TODO: Implement __invoke() method.
         $data = request()->validate([
             'name' => 'string',
             'description' => 'string',
-            'terms' => 'date',
+            'start_date' => 'date',
+            'due_date' => 'date',
         ]);
+
         //dd($data);
-        $tasks = Task::all();
-        return $dataTable->render('task.index', compact('tasks'));
+        Task::create($data);
+        return redirect()->route('task.index');
     }
 
 }

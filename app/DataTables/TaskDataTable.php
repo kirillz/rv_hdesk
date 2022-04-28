@@ -75,11 +75,12 @@ class TaskDataTable extends DataTable
                   ->width(100)
                   ->addClass('text-center'),
             Column::make('id')->title('№'),
-            Column::make('name')->title('Наименование задачи'),
-            Column::make('description')->title('Описание задачи'),
-            Column::make('terms')->title('Условия выполнения'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            Column::make('name')->title('Наименование задачи')->width(100),
+            Column::make('description')->title('Описание задачи')->width(150),
+            Column::make('start_date')->title('Начать'),
+            Column::make('due_date')->title('Окончить до'),
+            //Column::make('created_at'),
+            //Column::make('updated_at'),
         ];
     }
 

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Task;
 
 use App\DataTables\TaskDataTable;
-use App\Http\Controllers\Controller;
+
 use App\Models\Task;
+use Illuminate\Routing\Controller;
 
 
 class ShowController extends Controller
@@ -12,8 +13,8 @@ class ShowController extends Controller
 
         public function __invoke(Task $task)
     {
-        $tasks = Task::all();
-        return view('task.show', compact('tasks'));
+
+        return view('task.show', compact('task'));
     }
 
 }

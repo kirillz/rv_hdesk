@@ -16,9 +16,12 @@ class CreateTasksTable extends Migration
         Schema::dropIfExists('tasks');
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->dateTime('terms');
+            $table->unsignedInteger('task_id')->index()->nullable();
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('due_date')->nullable();
+
             $table->timestamps();
         });
     }
@@ -30,6 +33,7 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('tasks');
     }
 }
