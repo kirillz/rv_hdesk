@@ -18,7 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->unsignedInteger('client_id')->index()->nullable();
             //$table->unsignedInteger('account_id')->index();
 
-            $table->string('invoice_number');
+
             $table->float('discount');
             $table->string('pers_order_number');
             $table->date('invoice_date')->nullable();
@@ -36,11 +36,11 @@ class CreateInvoicesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->string('tax_name1');
-            $table->decimal('tax_rate1', 13, 3);
+            $table->string('tax_name1')->nullable();
+            $table->decimal('tax_rate1', 13, 3)->nullable();
 
-            $table->decimal('amount', 13, 2);
-            $table->decimal('balance', 13, 2);
+            $table->decimal('amount', 13, 2)->nullable();
+            $table->decimal('balance', 13, 2)->nullable();
 
             $table->foreign('client_id')->references('id')->on('client')->onDelete('cascade');
             //$table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
