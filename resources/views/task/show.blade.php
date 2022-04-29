@@ -16,13 +16,32 @@
     </div>
     <div class="container">
         <div class="row">
-            {{$dataTable->table()}}
+            <table class="table table-primary table-hover table-stripped">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Задача</th>
+                    <th scope="col">Описание задачи</th>
+                    <th scope="col">Начата</th>
+                    <th scope="col">Окончить до</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ $task->id }}</td>
+                    <td>№ {{ $task->name }}</td>
+                    <td>{{ $task->description }}</td>
+                    <td>{{ $task->start_date }}</td>
+                    <td>{{ $task->due_date }}</td>
+                </tr>
+                </tbody>
+            </table>
 
         </div>
     </div>
 
 @endsection
 
-@push('scripts')
-    {{$dataTable->scripts()}}
-@endpush
+{{--@push('scripts')--}}
+{{--    {{$dataTable->scripts()}}--}}
+{{--@endpush--}}

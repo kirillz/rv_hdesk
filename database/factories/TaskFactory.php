@@ -18,7 +18,7 @@ class TaskFactory extends Factory
         $taskIds = Task::all()->pluck('id')->toArray();
         return [
             'task_id' => $this->faker->randomElement($taskIds),
-            'name' => $this->faker->name(),
+            'name' => $this->faker->sentence(2,false),
             'description' => $this->faker->sentence(4,true),
             'start_date' => $this->faker->dateTimeInInterval('-30','+7','Europe/Moscow'),
             'due_date' => $this->faker->dateTimeInInterval('-30','+7','Europe/Moscow'),
