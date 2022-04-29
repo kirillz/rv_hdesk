@@ -69,6 +69,7 @@ class ClientDataTable extends DataTable
     protected function getColumns(): array
     {
         return [
+            // FIXME: Название организ,	ФИО, Эл. почта,	Дата создания, К оплате
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)

@@ -3,7 +3,6 @@
 @section('content')
     <div class="mb-4">
         <div class="shadow p-3 mb-5 bg-body rounded">
-
             <form action="{{ route('client.delete', $client->id) }}" method="post">
                 @csrf
                 @method('delete')
