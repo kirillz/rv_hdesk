@@ -778,7 +778,6 @@ div.dt-button-collection span.dt-button-spacer {
 /* The side navigation menu */
 .sidenav {
   height: 100%;
-  /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
   position: fixed;
@@ -788,13 +787,11 @@ div.dt-button-collection span.dt-button-spacer {
   top: 0;
   left: 0;
   background-color: #111;
-  /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 180px;
-  /* Place content 60px from the top */
+  /* Place content 180px from the top */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */

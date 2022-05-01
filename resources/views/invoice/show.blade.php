@@ -22,13 +22,13 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Номер счета</th>
-                    <th scope="col">Дата создания</th>
+                    <th scope="col">Создан</th>
                     <th scope="col">Дата оплаты</th>
                     <th scope="col">Условия оплаты</th>
                     <th scope="col">Удален</th>
                     <th scope="col">Периодич.</th>
-                    <th scope="col">Начало</th>
-                    <th scope="col">Окончание</th>
+                    <th scope="col">Начало работ</th>
+                    <th scope="col">Окончание работ</th>
                     <th scope="col">Налог</th>
                     <th scope="col">% по налогу</th>
                     <th scope="col">Количество</th>

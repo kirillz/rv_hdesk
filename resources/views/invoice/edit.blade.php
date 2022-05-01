@@ -25,11 +25,11 @@
                     <input type="text" name="terms" class="form-control" id="terms" placeholder="Условия оплаты">
                 </div>
                 <div class="col-md-3">
-                    <label for="start_date" class="form-label">Дата начала</label>
+                    <label for="start_date" class="form-label">Дата начала работ</label>
                     <input type="text" name="start_date" class="form-control" id="start_date" placeholder="Начало">
                 </div>
                 <div class="col-md-3">
-                    <label for="end_date" class="form-label">Дата завершения</label>
+                    <label for="end_date" class="form-label">Дата завершения работ</label>
                     <input type="text" name="end_date" class="form-control" id="end_date" placeholder="Завершение">
                 </div>
                 <div class="col-md-3">
