@@ -5,7 +5,10 @@
 @import 'variables';
 
 // MY App Imports
+@import 'sidebar';
+@import 'utils';
 @import 'dashboard';
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
