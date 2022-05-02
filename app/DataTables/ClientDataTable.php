@@ -84,7 +84,7 @@ class ClientDataTable extends DataTable
             Column::computed('name')
               ->exportable(false)
               ->printable(false)
-              ->width(100)
+              ->width(150)
               ->addClass('text-center'),
             Column::make('email')->title('Почта'),
             Column::make('address1')->title('Адрес 1'),
