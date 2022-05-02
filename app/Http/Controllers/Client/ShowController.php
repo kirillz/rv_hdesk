@@ -6,7 +6,7 @@ use App\Models\Client;
 use App\Models\Invoice;
 use Illuminate\Routing\Controller;
 
-class ShowController extends Controller
+class ShowController extends BaseController
 {
     public function __invoke(Client $client)
     {

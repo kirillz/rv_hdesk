@@ -5,7 +5,7 @@ use App\Models\Client;
 use Illuminate\Routing\Controller;
 
 
-class DestroyController extends Controller
+class DestroyController extends BaseController
 {
     public function __invoke(Client $client): \Illuminate\Http\RedirectResponse
     {
