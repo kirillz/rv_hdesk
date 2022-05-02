@@ -1,17 +1,17 @@
 <?php
 
 namespace App\Http\Controllers\Client;
-use App\Models\Client;
-use Illuminate\Routing\Controller;
-use App\DataTables\ClientDataTable;
 
-class ShowController extends Controller
+use App\Models\Client;
+use App\Models\Invoice;
+use Illuminate\Routing\Controller;
+
+class ShowController extends BaseController
 {
     public function __invoke(Client $client)
     {
-        // TODO: Implement __invoke() method.
-        //dd($client->name);
-        $clients = Client::all();
-        return view('client.show', compact('clients'));
+        //dd($invoice->name);
+        return view('client.show', compact('client'));
     }
+
 }

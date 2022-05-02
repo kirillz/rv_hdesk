@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Invoice;
 
 use App\DataTables\InvoiceDataTable;
-use App\Models\Client;
 use App\Models\Invoice;
 
 use Illuminate\Routing\Controller;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function __invoke(InvoiceDataTable $dataTable)
     {
