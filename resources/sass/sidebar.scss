@@ -1,10 +1,10 @@
 /* Style the links inside the sidenav */
 #mySideBtn a {
     position: absolute; /* Position them relative to the browser window */
-    left: -35px; /* Position them outside of the screen */
+    left: -30px; /* Position them outside of the screen */
     transition: 0.3s; /* Add transition on hover */
     padding: 15px; /* 15px padding */
-    width: 60px; /* Set a specific width */
+    width: 40px; /* Set a specific width */
     text-decoration: none; /* Remove underline */
     font-size: 20px; /* Increase font size */
     color: #ffffff; /* White text color */
@@ -18,15 +18,19 @@
 
 /* The about link: 20px from the top with a green background */
 #sidebtn {
-    top: 20px;
+    top: 100px;
     text-align: end;
     background-color: #d50202;
+    i {
+      left: 10px;
+    }
 }
 
 
 /* The side navigation menu */
 .sidenav {
     height: 100%;
+    font-size: 20px;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -40,7 +44,7 @@
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;

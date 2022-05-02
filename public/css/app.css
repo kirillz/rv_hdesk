@@ -744,13 +744,13 @@ div.dt-button-collection span.dt-button-spacer {
 #mySideBtn a {
   position: absolute;
   /* Position them relative to the browser window */
-  left: -35px;
+  left: -30px;
   /* Position them outside of the screen */
   transition: 0.3s;
   /* Add transition on hover */
   padding: 15px;
   /* 15px padding */
-  width: 60px;
+  width: 40px;
   /* Set a specific width */
   text-decoration: none;
   /* Remove underline */
@@ -770,14 +770,18 @@ div.dt-button-collection span.dt-button-spacer {
 
 /* The about link: 20px from the top with a green background */
 #sidebtn {
-  top: 20px;
+  top: 100px;
   text-align: end;
   background-color: #d50202;
+}
+#sidebtn i {
+  left: 10px;
 }
 
 /* The side navigation menu */
 .sidenav {
   height: 100%;
+  font-size: 20px;
   width: 0;
   /* 0 width - change this with JavaScript */
   position: fixed;
@@ -796,7 +800,7 @@ div.dt-button-collection span.dt-button-spacer {
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;

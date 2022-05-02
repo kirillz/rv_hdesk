@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Client;
-use App\Http\Requests\Client\StoreRequest;
+
+use App\Http\Requests\Client\UpdateRequest;
 use App\Models\Client;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Controller;
+
 
 class UpdateController extends BaseController
 {
