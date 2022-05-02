@@ -8,7 +8,7 @@ use Illuminate\Routing\Controller;
 
 class UpdateController extends BaseController
 {
-    public function __invoke(StoreRequest  $request, Client $client): RedirectResponse
+    public function __invoke(UpdateRequest  $request, Client $client): RedirectResponse
 
     {
         $data = $request->validated();
