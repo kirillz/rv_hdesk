@@ -40,3 +40,15 @@ Route::get('/invoices/{invoice}/edit', 'EditController')->name('invoice.edit');
 Route::patch('/invoices/{invoice}', 'UpdateController')->name('invoice.update');
 Route::delete('/invoices/{invoice}', 'DestroyController')->name('invoice.delete');
 });
+
+// Tasks CRUD
+Route::group(['namespace' => 'Task'], function() {
+    Route::get('/tasks', 'IndexController')->name('task.index');
+    Route::get('/tasks/create', 'CreateController')->name('task.create');
+    Route::post('/tasks', 'StoreController')->name('task.store');
+    Route::get('/tasks/{task}', 'ShowController')->name('task.show');
+    // for update, we need two route look at convention (https://laravel.com/docs/9.x/controllers#actions-handled-by-resource-controller)
+    Route::get('/tasks/{task}/edit', 'EditController')->name('task.edit');
+    Route::patch('/tasks/{task}', 'UpdateController')->name('task.update');
+    Route::delete('/tasks/{task}', 'DestroyController')->name('task.delete');
+});

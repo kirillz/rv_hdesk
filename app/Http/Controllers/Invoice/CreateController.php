@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class CreateController extends Controller
+class CreateController extends BaseController
 {
     public function __invoke()
     {

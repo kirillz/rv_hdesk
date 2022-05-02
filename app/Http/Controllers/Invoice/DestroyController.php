@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class DestroyController extends Controller
+class DestroyController extends BaseController
 {
     public function __invoke(Invoice $invoice): RedirectResponse
     {

@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
     public function __invoke(Invoice $invoice)
     {
@@ -26,8 +26,8 @@ class UpdateController extends Controller
             'amount' => 'string',
             'balance' => 'string',
         ]);
-        //dd($data);
-        $invoice->update($data);
+       $this->service->update($invoice, $data);
+
         return redirect()->route('invoice.show', $invoice->id);
     }
 

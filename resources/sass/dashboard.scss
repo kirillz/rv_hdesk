@@ -1,0 +1,47 @@
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel-body {
+  padding: 25px;
+}
+.panel-default  {
+  background: #EDF0FFFF;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+}
+.pull-right {
+  display: flex;
+  align-content: flex-end;
+  color: #337AB7FF;
+  font-size: 16px;
+}
+.in-bold {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: 700;
+  color: #337ab7;
+}
+.in-thin {
+  font-size: 26px;
+  font-weight: 100;
+}
+.currency-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 900;
+  padding: 0 20px 0 0;
+  color: black;
+}
+.currency-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
+  color: #337ab7;
+
+}

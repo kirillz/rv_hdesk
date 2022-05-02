@@ -1,25 +1,20 @@
 <?php
 
 namespace App\Http\Controllers\Client;
+use App\Http\Requests\Client\StoreRequest;
 use App\Models\Client;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
-use App\DataTables\ClientDataTable;
 
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
-    public function __invoke(Client $client): \Illuminate\Http\RedirectResponse
+    public function __invoke(UpdateRequest  $request, Client $client): RedirectResponse
+
     {
-        // TODO: Implement __invoke() method.
-        $data = request()->validate([
-            'name' => 'string',
-            'address1' => 'string',
-            'address2' => 'string',
-            'city' => 'string',
-            'state' => 'string',
-            'postal_code' => 'integer',
-        ]);
-        //dd($data);
-        $client->update($data);
+        $data = $request->validated();
+
+        $this->service->update($client, $data);
+
         return redirect()->route('client.show', $client->id);
     }
 }
