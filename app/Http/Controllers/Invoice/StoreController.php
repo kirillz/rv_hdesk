@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class StoreController extends Controller
+class StoreController extends BaseController
 {
     public function __invoke()
     {
@@ -26,8 +26,7 @@ class StoreController extends Controller
             'amount' => 'string',
             'balance' => 'string',
         ]);
-        //dd($data);
-        Invoice::create($data);
+
         return redirect()->route('invoice.index');
     }
 

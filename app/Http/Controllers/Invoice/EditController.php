@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Invoice;
 use App\Models\Invoice;
 use Illuminate\Routing\Controller;
 
-class EditController extends Controller
+class EditController extends BaseController
 {
     public function __invoke(Invoice $invoice)
     {
