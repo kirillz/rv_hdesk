@@ -8,7 +8,7 @@ use App\Models\Task;
 use Illuminate\Routing\Controller;
 use App\DataTables\ClientDataTable;
 
-class CreateController extends Controller
+class CreateController extends BaseController
 {
     public function __invoke()
     {

@@ -6,7 +6,7 @@ use App\Models\Client;
 use Illuminate\Routing\Controller;
 use App\DataTables\ClientDataTable;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function __invoke(ClientDataTable $dataTable)
     {

@@ -6,14 +6,15 @@ use App\Models\Client;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
 
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
     public function __invoke(StoreRequest  $request, Client $client): RedirectResponse
 
     {
         $data = $request->validated();
-        //dd($data);
-        $client->update($data);
+
+        $this->service->update($client, $data);
+
         return redirect()->route('client.show', $client->id);
     }
 }
