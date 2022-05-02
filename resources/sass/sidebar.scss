@@ -22,12 +22,16 @@
     top: 100px;
     text-align: end;
     background-color: #d50202;
+    i {
+      color: white;
+    }
 }
 /////////////////  /Button  ///////////////////////////
 
 /* The side navigation menu */
 .sidenav {
     height: 100%;
+    font-size: 20px;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -49,7 +53,7 @@
     transition: 0.3s;
     i {
       transition: .10s;
-      color: white;
+      color: #818181;
     }
 
 }
@@ -58,7 +62,6 @@
 .sidenav a:hover {
     color: #f1f1f1;
   i {
-
     color: red;
   }
 }
