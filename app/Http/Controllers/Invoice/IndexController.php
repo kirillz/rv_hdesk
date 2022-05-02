@@ -7,7 +7,7 @@ use App\Models\Invoice;
 
 use Illuminate\Routing\Controller;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function __invoke(InvoiceDataTable $dataTable)
     {
