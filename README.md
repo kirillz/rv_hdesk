@@ -7,7 +7,10 @@ Sample app for learn Laravel framework.
 This application is created in order to learn the basics of the Laravel framework and at the same time solve some practical problem for myself.
 
 The idea behind the app is to keep track of clients and jobs for a self-employed IT professional these days. It is also planned to implement accounting of projects and time spent. It is also a list of services, calculation of payments by clients and so on.
-
+### Requirements
+* PHP 8.1
+* SQLite 3
+* Laravel Framework 9.10
 
 ### :hammer_and_wrench: Installation
 * Install [Composer](https://getcomposer.org/) and [Npm](https://nodejs.org/)
@@ -19,7 +22,7 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * `npm run dev`
 * Create empty file for sqlite `touch /database/database.sqlite`
 * Rename or move .env.example: `mv .env.example .env`
-* Run dev server `php artisan migrate && php artisan key:generate && php artisan serve`
+* Run dev server `php artisan migrate --seed && php artisan key:generate && php artisan serve`
 * App on: http://127.0.0.1:8000
 
 Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" >
