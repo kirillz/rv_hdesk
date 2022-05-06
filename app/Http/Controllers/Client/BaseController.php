@@ -7,9 +7,9 @@ use App\Services\Client\Service;
 
 class BaseController extends Controller
 {
-  public $service;
-  public function __construct(Service $service)
+  public $clientService;
+  public function __construct(ClientService $clientService)
   {
-    $this->service = $service;
+    $this->clientService = $clientService;
   }
 }

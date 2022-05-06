@@ -3,6 +3,7 @@
 namespace App\Services\Client;
 
 use App\Models\Client;
+use Illuminate\Support\Facades\DB;
 
 class Service
 {
@@ -13,6 +14,9 @@ class Service
   public function update($client, $data) {
     //dd($data);
     $client->update($data);
+  }
+  public function getClientsCount() {
+    return DB::table('client')->count();
   }
 
 }
