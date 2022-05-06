@@ -742,7 +742,7 @@ div.dt-button-collection span.dt-button-spacer {
 @charset "UTF-8";
 /* Style the links inside the sidenav */
 #mySideBtn a {
-  position: absolute;
+  position: fixed;
   /* Position them relative to the browser window */
   left: -27px;
   /* Position them outside of the screen */
@@ -897,13 +897,13 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
   color: #337ab7;
 }
 
 .in-thin {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 100;
 }
 

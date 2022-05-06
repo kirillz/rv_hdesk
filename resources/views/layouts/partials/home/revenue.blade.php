@@ -7,7 +7,7 @@
                     Совокупный доход
                 </div>
                 <div class="in-bold">
-                    <div class="currency-left">0.00 RUB</div>
+                    <div class="currency-left">{{ $invoiceSum }} RUB</div>
                     <div class="currency-right">0.00 RUB</div>
                 </div>
                 <div class="range-label-div in-thin pull-right">
@@ -25,7 +25,7 @@
                     Средний счет
                 </div>
                 <div class="in-bold">
-                    <div class="currency-left">0.00 RUB</div>
+                    <div class="currency-left">{{ $invoiceAvg }} RUB</div>
                     <div class="currency-right">0.00 RUB</div>
                 </div>
                 <div class="range-label-div in-thin pull-right">
@@ -40,14 +40,14 @@
         <div class="panel-body revenue-panel">
             <div style="overflow: hidden;">
                 <div class="in-thin">
-                    Исходящие ср-ва
+                    Суммарно:
                 </div>
-                <div class="in-bold">
-                    <div class="currency-left">0.00 RUB</div>
-                    <div class="currency-right">0.00 RUB</div>
-                </div>
-                <div class="range-label-div in-thin pull-right">
-                    Последние 30 дней
+                <div>
+                  <div class="range-label-div in-thin">
+                    <div class="currency-right in-bold">Клиентов: {{ $clientsCount }} Счетов: {{ $invoicesCount }}</div>
+                    <div class="currency-right in-thin">Задач: 0</div>
+                  </div>
+
                 </div>
             </div>
         </div>
