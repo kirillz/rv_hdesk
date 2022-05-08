@@ -22,7 +22,8 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * `npm run dev`
 * Create empty file for sqlite `touch /database/database.sqlite`
 * Rename or move .env.example: `mv .env.example .env`
-* Run dev server `php artisan migrate --seed && php artisan key:generate && php artisan serve`
+* To see all commands for setup RV HDESK just type `php artisan list RV`
+* then type `php artisan RV:setup`
 * App on: http://127.0.0.1:8000
 
 Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" >

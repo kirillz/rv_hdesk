@@ -46,5 +46,15 @@
             </form>
         </div>
     </div>
+  <div class="mb-4">
+    <div class="shadow p-3 mb-5 bg-body rounded text-end">
+      <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Активная</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Длинная ссылка навигации</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Ссылка</a>
+        <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+      </nav>
+    </div>
+  </div>
 
 @endsection
