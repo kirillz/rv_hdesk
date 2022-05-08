@@ -13,26 +13,25 @@ use Carbon\Carbon;
 
 class HomeController extends Controller
 {
-
-  private ClientService $clientService;
-  private InvoiceService $invoiceService;
-
-  public function __construct(ClientService $clientService, InvoiceService $invoiceService)
+  function getInvoiceBalance($client_id)
   {
-    $this->clientService = $clientService;
-    $this->invoiceService = $invoiceService;
+    $invoices = Invoice::all('client_id');
+    dd($invoices);
+    $id = $invoices->getId('$client_id');
+    return DB::table('invoices')->where('client_id' . `=` . $id)->sum('balance');
   }
 
-  public function index(Invoice $invoice, Client $client, ClientService $clientService, InvoiceService $invoiceService)
-  {
-    $invoice = Invoice::all();
-    $client = Client::all();
-    $invoiceSum = $this->invoiceService->getBalanceSum();
-    $invoiceAvg = $this->invoiceService->getBalanceAvg();
-    $clientsCount = $this->clientService->getClientsCount();
-    $invoicesCount = $this->invoiceService->getInvoicesCount();
 
-    return view('home', compact('invoiceSum', 'invoiceAvg', 'clientsCount', 'invoicesCount'));
+  public function index(Invoice $invoice, Client $client)
+  {
+
+    $invoices = Invoice::all();
+    $id = $invoices->
+    get('$client_id');
+    $balance = $this->getInvoiceBalance('id');
+
+    //dump($balance);
+    return view('home', compact('invoice', 'balance'));
   }
 //TODO: тут нужен Chart.js график  линейный с суммой доходов за год месяц неделю день
 // TODO: we need 404 page
