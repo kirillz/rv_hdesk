@@ -20,7 +20,6 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * `composer install`  
 * `npm install`  
 * `npm run dev`
-* Create empty file for sqlite `touch /database/database.sqlite`
 * Rename or move .env.example: `mv .env.example .env`
 * To see all commands for setup RV HDESK just type `php artisan list RV`
 * then type `php artisan RV:setup`
