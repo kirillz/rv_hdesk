@@ -17,13 +17,16 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * Clone the repository: `git clone https://github.com/kirillz/rv_hdesk.git`
 * Install dependencies:  
 * `cd rv_hdesk`
-* `composer install`  
-* `npm install`  
-* `npm run dev`
-* Rename or move .env.example: `mv .env.example .env`
-* To see all commands for setup RV HDESK just type `php artisan list RV`
-* then type `php artisan RV:setup`
+* `composer install`  - for dependencies
+* `npm install` - for node modules
+* `npm run dev` - for compile assets by Laravel Mix.
+* `mv .env.example .env` - Rename or move .env.example
+* `php artisan RV:setup` - first run helper.
 * App on: http://127.0.0.1:8000
+
+To see all commands for setup RV HDESK just type `php artisan list RV`
+
+
 
 Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" >
 <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" >
