@@ -31,16 +31,15 @@ class LoadDemoData extends Command
    */
   public function handle(): int
   {
-    $data = $this->withProgressBar([Client::all(), Invoice::all(), Task::all()], function () {
-      Artisan::command('migrate:refresh --seed', function () {
-      })->purpose('Загрузить демонстрационные данные');
-    });
     $this->newLine();
     $this->info(date('r') . '   Запуск миграций');
     $this->performTaskClients();
     $this->performTaskInvoices();
     $this->performTaskTasks();
+    Artisan::call('migrate:refresh --seed');
+    $this->newLine();
     $this->info(date('r') . '   Готово');
+
     return 0;
   }
 
