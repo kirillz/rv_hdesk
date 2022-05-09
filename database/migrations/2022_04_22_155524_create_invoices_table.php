@@ -45,7 +45,6 @@ class CreateInvoicesTable extends Migration
             //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             //$table->foreign('invoice_status_id')->references('id')->on('invoice_statuses');
             //$table->foreign('recurring_invoice_id')->references('id')->on('invoices')->onDelete('cascade');
-
         });
     }
 

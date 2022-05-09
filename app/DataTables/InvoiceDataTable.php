@@ -23,8 +23,8 @@ class InvoiceDataTable extends DataTable
         return datatables()
             ->eloquent($query)
             ->rawColumns(['action'])
-            ->addColumn('action', function(Invoice $invoice){
-                return '<a href="' . route('invoice.edit' , $invoice->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('invoice.delete' , $invoice->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            ->addColumn('action', function (Invoice $invoice) {
+                return '<a href="' . route('invoice.edit', $invoice->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('invoice.delete', $invoice->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
             });
     }
 
@@ -95,6 +95,6 @@ class InvoiceDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Invoice_' . date('YmdHis');
+        return 'Invoice_' . date('Ymd');
     }
 }

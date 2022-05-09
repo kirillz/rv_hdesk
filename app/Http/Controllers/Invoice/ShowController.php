@@ -13,5 +13,4 @@ class ShowController extends BaseController
 
         return view('invoice.show', compact('invoice'));
     }
-
 }

@@ -20,7 +20,7 @@ class ClientFactory extends Factory
             'address1' => $this->faker->unique()->address(),
             'city' => $this->faker->unique()->city(),
             'state' => $this->faker->unique()->country(),
-            'postal_code' => $this->faker->numberBetween(0,999999),
+            'postal_code' => $this->faker->numberBetween(0, 999999),
         ];
     }
 }

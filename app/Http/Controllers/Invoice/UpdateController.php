@@ -26,9 +26,8 @@ class UpdateController extends BaseController
             'amount' => 'string',
             'balance' => 'string',
         ]);
-       $this->service->update($invoice, $data);
+        $this->service->update($invoice, $data);
 
         return redirect()->route('invoice.show', $invoice->id);
     }
-
 }

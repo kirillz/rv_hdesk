@@ -12,5 +12,4 @@ class EditController extends BaseController
         // dd($invoice->name);
         return view('invoice.edit', compact('invoice'));
     }
-
 }
