@@ -1,7 +1,7 @@
 /* Style the links inside the sidenav */
 #mySideBtn a {
-    position: absolute; /* Position them relative to the browser window */
-    left: -30px; /* Position them outside of the screen */
+    position: fixed; /* Position them relative to the browser window */
+    left: -27px; /* Position them outside of the screen */
     transition: 0.3s; /* Add transition on hover */
     padding: 15px; /* 15px padding */
     width: 40px; /* Set a specific width */
