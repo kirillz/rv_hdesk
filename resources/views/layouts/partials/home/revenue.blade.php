@@ -7,7 +7,7 @@
                     Совокупный доход
                 </div>
                 <div class="in-bold">
-                    <div class="currency-left">{{ $invoice->balance->total() }} RUB</div>
+                    <div class="currency-left">{{ $invoiceSum }} RUB</div>
                     <div class="currency-right">0.00 RUB</div>
                 </div>
                 <div class="range-label-div in-thin pull-right">

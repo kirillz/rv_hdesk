@@ -1,3 +1,4 @@
+//////////  Button  //////////////////////////
 /* Style the links inside the sidenav */
 #mySideBtn a {
     position: fixed; /* Position them relative to the browser window */
@@ -6,7 +7,7 @@
     padding: 15px; /* 15px padding */
     width: 40px; /* Set a specific width */
     text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
+    font-size: 22px; /* Increase font size */
     color: #ffffff; /* White text color */
     border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
     z-index: 2;
@@ -22,10 +23,10 @@
     text-align: end;
     background-color: #d50202;
     i {
-      left: 10px;
+      color: white;
     }
 }
-
+/////////////////  /Button  ///////////////////////////
 
 /* The side navigation menu */
 .sidenav {
@@ -38,7 +39,7 @@
     left: 0;
     background-color: #111;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 180px; /* Place content 180px from the top */
+    padding-top: 200px; /* Place content 180px from the top */
     transition: 0.5s;
 }
 
@@ -50,11 +51,19 @@
     color: #818181;
     display: block;
     transition: 0.3s;
+    i {
+      transition: .10s;
+      color: #818181;
+    }
+
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
+  i {
+    color: red;
+  }
 }
 
 /* Position and style the close button (top right corner) */

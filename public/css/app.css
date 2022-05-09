@@ -744,7 +744,7 @@ div.dt-button-collection span.dt-button-spacer {
 #mySideBtn a {
   position: fixed;
   /* Position them relative to the browser window */
-  left: -30px;
+  left: -27px;
   /* Position them outside of the screen */
   transition: 0.3s;
   /* Add transition on hover */
@@ -754,7 +754,7 @@ div.dt-button-collection span.dt-button-spacer {
   /* Set a specific width */
   text-decoration: none;
   /* Remove underline */
-  font-size: 20px;
+  font-size: 22px;
   /* Increase font size */
   color: #ffffff;
   /* White text color */
@@ -775,7 +775,7 @@ div.dt-button-collection span.dt-button-spacer {
   background-color: #d50202;
 }
 #sidebtn i {
-  left: 10px;
+  color: white;
 }
 
 /* The side navigation menu */
@@ -793,7 +793,7 @@ div.dt-button-collection span.dt-button-spacer {
   background-color: #111;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 180px;
+  padding-top: 200px;
   /* Place content 180px from the top */
   transition: 0.5s;
 }
@@ -807,10 +807,17 @@ div.dt-button-collection span.dt-button-spacer {
   display: block;
   transition: 0.3s;
 }
+.sidenav a i {
+  transition: 0.1s;
+  color: #818181;
+}
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
+}
+.sidenav a:hover i {
+  color: red;
 }
 
 /* Position and style the close button (top right corner) */
