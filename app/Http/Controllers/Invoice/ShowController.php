@@ -10,6 +10,7 @@ class ShowController extends BaseController
     public function __invoke(Invoice $invoice)
     {
         //dd($invoice->name);
+
         return view('invoice.show', compact('invoice'));
     }
 
