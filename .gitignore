@@ -5,6 +5,9 @@
 /public/storage
 /storage/*.key
 /vendor
+.php-cs-fixer.php
+.php-cs-fixer.cache
+identifier.sqlite
 .env
 .env.backup
 .phpunit.result.cache

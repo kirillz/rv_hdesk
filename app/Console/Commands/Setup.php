@@ -22,18 +22,36 @@ class Setup extends Command
    */
   protected $description = 'Настроить только что установленное приложение';
 
-  /**
-   * Execute the console command.
-   *
-   * @return int
-   */
-  public function handle()
-  {
-    $keyGenerated = config('app.key');
-    $databaseFile = config('database.connections.sqlite.database');
-    if (!file_exists($databaseFile)) {
-      $this->info('Создаю Sqlite файл "' . $databaseFile . '"');
-      file_put_contents($databaseFile, '');
+    /**
+     * Execute the console command.
+     *
+     * @return int
+     */
+    public function handle()
+    {
+        $keyGenerated = config('app.key');
+        $databaseFile = config('database.connections.sqlite.database');
+        if (!file_exists($databaseFile)) {
+            $this->info('Создаю Sqlite файл "' . $databaseFile . '"');
+            file_put_contents($databaseFile, '');
+        }
+        if (empty($keyGenerated)) {
+            $this->info('Создаю ключ key:generate');
+            Artisan::call('key:generate');
+        }
+        $doMigrate = $this->choice(
+        'Хотите чтобы я сделал миграции?',
+        ['Да', 'Нет'],
+        '0',
+        );
+        if ($doMigrate == 'Да' ) {
+          $this->info('Запускаю migrate...');
+          Artisan::call('migrate');
+          dump(Artisan::output());
+          $this->info('готово.');
+        }
+
+        return 0;
     }
     if (empty($keyGenerated)) {
       $this->info('Создаю ключ key:generate');
