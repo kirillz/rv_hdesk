@@ -19,7 +19,7 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * `composer install`  - for dependencies
 * `npm install` - for node modules
 * `npm run dev` - for compile assets by Laravel Mix.
-* `mv .env.example .env` - Rename or move .env.example
+* `cp .env.example .env` - copy or move .env.example to .env
 * `php artisan RV:setup` - first run helper.
 * `php artisan RV:demo-data` - for demo data.
 * `php artisan serve` - integrated server.
