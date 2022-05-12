@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Invoice;
-use App\Services\Invoice\Service as InvoiceService;
+use App\Services\Payment\Service as InvoiceService;
 use App\Services\Client\Service;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;

@@ -14,6 +14,9 @@ class CreateClientsTable extends Migration
     public function up()
     {
         Schema::dropIfExists('client');
+        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('payments');
 
         Schema::create('client', function (Blueprint $table) {
             $table->id();

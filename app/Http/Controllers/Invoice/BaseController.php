@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Invoice;
 
 use App\Http\Controllers\Controller;
-use App\Services\Invoice\Service;
+use App\Services\Payment\Service;
 
 class BaseController extends Controller
 {

@@ -53,5 +53,17 @@ Route::group(['namespace' => 'Task'], function () {
     Route::delete('/tasks/{task}', 'DestroyController')->name('task.delete');
 });
 
+// Payments CRUD
+Route::group(['namespace' => 'Payment'], function () {
+  Route::get('/payments', 'IndexController')->name('payment.index');
+  Route::get('/payments/create', 'CreateController')->name('payment.create');
+  Route::post('/payments', 'StoreController')->name('payment.store');
+  Route::get('/payments/{payment}', 'ShowController')->name('payment.show');
+  // for update, we need two route look at convention (https://laravel.com/docs/9.x/controllers#actions-handled-by-resource-controller)
+  Route::get('/payments/{payment}/edit', 'EditController')->name('payment.edit');
+  Route::patch('/payments/{payment}', 'UpdateController')->name('payment.update');
+  Route::delete('/payments/{payment}', 'DestroyController')->name('payment.delete');
+});
+
 //// Include static app constants
 //require_once app_path() . '/Constants.php';
