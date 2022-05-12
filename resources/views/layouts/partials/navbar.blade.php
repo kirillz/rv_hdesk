@@ -17,6 +17,9 @@
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('invoice.index') }}">Счета</a>
                 </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="{{ route('payment.index') }}">Оплаты</a>
+              </li>
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('task.index') }}">Задачи</a>
                 </li>

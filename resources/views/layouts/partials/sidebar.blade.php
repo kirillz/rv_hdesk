@@ -15,6 +15,10 @@
                                                                       style="width:46px; padding-right:8px"></i>Счета</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link fs-5" href="{{ route('payment.index') }}"><i class="fa fa-file-invoice-dollar"
+                                                                      style="width:46px; padding-right:8px"></i>Оплаты</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link fs-5" href="{{ route('task.index') }}"><i class="fa-solid fa-list-check"
                                                                    style="width:46px; padding-right:8px"></i>Задачи</a>
     </li>

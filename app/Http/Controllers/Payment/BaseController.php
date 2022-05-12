@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Invoice;
+namespace App\Http\Controllers\Payment;
 
 use App\Http\Controllers\Controller;
 use App\Services\Payment\Service;
@@ -12,5 +12,4 @@ class BaseController extends Controller
   {
     $this->service = $service;
   }
-
 }
