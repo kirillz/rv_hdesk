@@ -25,13 +25,15 @@ class CreateInvoicesTable extends Migration
             $table->decimal('tax_rate1', 13, 3)->nullable();
             $table->decimal('amount', 13, 2)->nullable();
             $table->decimal('balance', 13, 2)->nullable();
-            $table->text('terms');
-            $table->text('public_notes');
+            $table->text('terms')->nullable();
+            $table->text('public_notes')->nullable();
             $table->boolean('is_deleted')->default(false);
             $table->boolean('is_recurring')->default(false);
             //$table->unsignedInteger('frequency_id');
             $table->date('work_start_date')->nullable();
             $table->date('work_due_date')->nullable();
+            $table->date('work_end_date')->nullable();
+            $table->date('pay_due_date')->nullable();
             $table->timestamp('last_sent_date')->nullable();
             $table->unsignedInteger('recurring_invoice_id')->index()->nullable();
 

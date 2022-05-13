@@ -23,10 +23,10 @@ class PaymentDataTable extends DataTable
             ->eloquent($query)
           ->rawColumns(['action', 'name'])
           ->addColumn('name', function (Payment $payment) {
-            return '<a href="' . route('payment.show', $payment->id) .'">' . $payment->name . '</a>';
+              return '<a href="' . route('payment.show', $payment->id) .'">' . $payment->name . '</a>';
           })
           ->addColumn('action', function (Payment $payment) {
-            return '<a href="' . route('payment.edit', $payment->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('payment.delete', $payment->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+              return '<a href="' . route('payment.edit', $payment->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('payment.delete', $payment->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
           });
     }
 
@@ -86,7 +86,7 @@ class PaymentDataTable extends DataTable
             ->addClass('text-center'),
           Column::make('invoice_id')->title('Счет'),
           Column::make('client_id')->title('Источник'),
-          Column::make('amount')->title('Всего'),
+          Column::make('amount')->title('Всего ₽'),
           Column::make('payment_date')->title('Дата оплаты'),
           Column::make('is_deleted')->title('Статус Удален?'),
           //Column::make('created_at')->title('Создан'),

@@ -7,8 +7,8 @@
           Совокупный доход
         </div>
         <div class="in-bold">
-          <div class="currency-left">{{ $invoiceSum }} RUB</div>
-          <div class="currency-right">0.00 RUB</div>
+          <div class="currency-left">{{ number_format($invoiceSum, 2, '.', '') }} ₽</div>
+          <div class="currency-right">0.00 ₽</div>
         </div>
         <div class="range-label-div in-thin pull-right">
           Последние 30 дней
@@ -25,8 +25,8 @@
           Средний счет
         </div>
         <div class="in-bold">
-          <div class="currency-left">{{ $invoiceAvg }} RUB</div>
-          <div class="currency-right">0.00 RUB</div>
+          <div class="currency-left">{{ number_format($invoiceAvg, 2, '.', '') }} ₽</div>
+          <div class="currency-right">0.00 ₽</div>
         </div>
         <div class="range-label-div in-thin pull-right">
           Последние 30 дней

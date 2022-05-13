@@ -10,10 +10,10 @@ use Illuminate\Http\Request;
 
 class CreateController extends BaseController
 {
-  public function __invoke(PaymentDataTable $dataTable, Request $request)
-  {
-    //
-    $payments = Payment::all();
-    return $dataTable->render('payment.index', compact('payments'));
-  }
+    public function __invoke(PaymentDataTable $dataTable, Request $request)
+    {
+        //
+        $payments = Payment::all();
+        return $dataTable->render('payment.index', compact('payments'));
+    }
 }

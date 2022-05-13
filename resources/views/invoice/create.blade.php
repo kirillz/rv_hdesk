@@ -2,6 +2,15 @@
 
 @section('content')
     <div class="container">
+      @if ($errors->any())
+        <div class="alert alert-danger">
+          <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
         <h3>создание Счета</h3>
         <div class="row">
 
@@ -16,24 +25,28 @@
                     <input type="text" name="invoice_date" class="form-control" id="invoice_date" placeholder="Дата создания">
                 </div>
                 <div class="col-md-3">
-                    <label for="due_date" class="form-label">Дата оплаты</label>
-                    <input type="text" name="due_date" class="form-control" id="due_date" placeholder="Дата оплаты">
+                    <label for="pay_due_date" class="form-label">Жел Дата оплаты</label>
+                    <input type="text" name="pay_due_date" class="form-control" id="pay_due_date" placeholder="Жел Дата оплаты">
                 </div>
                 <div class="col-6">
                     <label for="terms" class="form-label">Условия оплаты</label>
                     <input type="text" name="terms" class="form-control" id="terms" placeholder="Условия оплаты">
                 </div>
                 <div class="col-md-3">
-                    <label for="start_date" class="form-label">Дата начала</label>
-                    <input type="text" name="start_date" class="form-control" id="start_date" placeholder="Начало">
+                    <label for="work_start_date" class="form-label">Дата начала</label>
+                    <input type="text" name="work_start_date" class="form-control" id="work_start_date" placeholder="Начало">
+                </div>
+              <div class="col-md-3">
+                <label for="work_due_date" class="form-label">Желательно завершить до</label>
+                <input type="text" name="work_due_date" class="form-control" id="work_due_date" placeholder="Завершить до">
+              </div>
+                <div class="col-md-3">
+                    <label for="work_end_date" class="form-label">Фактич. завершение раб</label>
+                    <input type="text" name="work_end_date" class="form-control" id="work_end_date" placeholder="Фактич. завершение">
                 </div>
                 <div class="col-md-3">
-                    <label for="end_date" class="form-label">Дата завершения</label>
-                    <input type="text" name="end_date" class="form-control" id="end_date" placeholder="Завершение">
-                </div>
-                <div class="col-md-3">
-                    <label for="end_date" class="form-label">Название налога</label>
-                    <input type="text" name="end_date" class="form-control" id="end_date" placeholder="Название налога">
+                    <label for="tax_name1" class="form-label">Название налога</label>
+                    <input type="text" name="tax_name1" class="form-control" id="tax_name1" placeholder="Название налога">
                 </div>
                 <div class="col-md-3">
                     <label for="tax_rate1" class="form-label">% по налогу</label>

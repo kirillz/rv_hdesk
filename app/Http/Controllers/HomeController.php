@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Invoice;
-use App\Services\Payment\Service as InvoiceService;
+use App\Services\Invoice\Service as InvoiceService;
 use App\Services\Client\Service;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
@@ -17,11 +17,12 @@ class HomeController extends Controller
   private Service $service;
   private InvoiceService $invoiceService;
 
-  public function __construct(Service $service, InvoiceService $invoiceService)
-  {
-    $this->service = $service;
-    $this->invoiceService = $invoiceService;
-  }
+    public function index(Invoice $invoice, Client $client, Service $service, InvoiceService $invoiceService)
+    {
+        $invoiceSum = $this->invoiceService->getBalanceSum();
+        $invoiceAvg = $this->invoiceService->getBalanceAvg();
+        $clientsCount = $this->service->getClientsCount();
+        $invoicesCount = $this->invoiceService->getInvoicesCount();
 
   public function index(Invoice $invoice, Client $client, Service $service, InvoiceService $invoiceService)
   {
