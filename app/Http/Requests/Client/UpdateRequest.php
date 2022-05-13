@@ -24,13 +24,13 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'string',
-            'email' => 'string',
-            'address1' => 'string',
-            'address2' => 'string',
-            'city' => 'string',
-            'state' => 'string',
-            'postal_code' => 'integer',
-        ];
+      'name' => 'string',
+      'email' => 'string',
+      'address1' => 'string',
+      'address2' => 'string',
+      'city' => 'string',
+      'state' => 'string',
+      'postal_code' => 'integer',
+    ];
     }
 }

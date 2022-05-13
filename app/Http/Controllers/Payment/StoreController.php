@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Payment;
 
-
 class StoreController extends BaseController
 {
     public function __invoke()

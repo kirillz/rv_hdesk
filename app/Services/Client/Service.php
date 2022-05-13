@@ -17,7 +17,7 @@ class Service
         //dd($data);
         $client->update($data);
     }
-    public function getClientsCount()
+    public function getClientsCount(): int
     {
         return DB::table('client')->count();
     }

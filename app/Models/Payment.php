@@ -9,18 +9,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Payment extends Model
 {
-  use HasFactory;
-  use SoftDeletes;
+    use HasFactory;
+    use SoftDeletes;
 
-  protected $table = 'payments';
-  protected $guarded = false;
+    protected $table = 'payments';
+    protected $guarded = false;
 
-  public function client(): mixed
-  {
-    return $this->belongsTo('client');
-  }
-  public function invoice(): mixed
-  {
-    return $this->belongsTo('invoice');
-  }
+    public function client(): mixed
+    {
+        return $this->belongsTo('client');
+    }
+    public function invoice(): mixed
+    {
+        return $this->belongsTo('invoice');
+    }
 }

@@ -23,7 +23,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Номер счета</th>
                     <th scope="col">Создан</th>
-                    <th scope="col">Дата оплаты</th>
+                    <th scope="col">Жел Дата оплаты</th>
                     <th scope="col">Условия оплаты</th>
                     <th scope="col">Удален</th>
                     <th scope="col">Периодич.</th>
@@ -42,12 +42,12 @@
                     <td>{{ $invoice->id }}</td>
                     <td>Счет № {{ $invoice->invoice_number }}</td>
                     <td>{{ $invoice->invoice_date }}</td>
-                    <td>{{ $invoice->due_date }}</td>
+                    <td>{{ $invoice->pay_due_date }}</td>
                     <td>{{ $invoice->terms }}</td>
                     <td>{{ $invoice->is_deleted > 0 ? 'ДА': 'НЕТ' }}</td>
                     <td>{{ $invoice->is_recurring > 0 ? 'ДА': 'НЕТ' }}</td>
-                    <td>{{ $invoice->start_date }}</td>
-                    <td>{{ $invoice->end_date }}</td>
+                    <td>{{ $invoice->work_start_date }}</td>
+                    <td>{{ $invoice->work_end_date }}</td>
                     <td>{{ $invoice->tax_name1 }}</td>
                     <td>{{ $invoice->tax_rate1 }}</td>
                     <td>{{ $invoice->amount }}</td>

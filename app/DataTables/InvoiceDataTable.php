@@ -78,13 +78,11 @@ class InvoiceDataTable extends DataTable
             //Column::make('id'),
             Column::make('invoice_number')->title('№ Счета'),
             Column::make('discount')->title('Скидка(%)'),
-            Column::make('pers_order_number')->title('ID заказа'),
             Column::make('invoice_date')->title('Дата создания'),
             Column::make('work_start_date')->title('Дата начала работ'),
             Column::make('work_due_date')->title('Дата окончания'),
             Column::make('amount')->title('Кол-во'),
-            Column::make('balance')->title('Баланс счета'),
-
+            Column::make('balance')->title('Баланс счета ₽'),
         ];
     }
 

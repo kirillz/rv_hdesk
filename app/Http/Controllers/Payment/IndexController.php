@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Payment;
+
 use App\DataTables\PaymentDataTable;
 use App\Models\Payment;
 use App\Http\Controllers\Controller;
@@ -17,7 +18,7 @@ class IndexController extends Controller
     public function __invoke(PaymentDataTable $dataTable, Request $request)
     {
         //
-      $payments = Payment::all();
-      return $dataTable->render('payment.index', compact('payments'));
+        $payments = Payment::all();
+        return $dataTable->render('payment.index', compact('payments'));
     }
 }

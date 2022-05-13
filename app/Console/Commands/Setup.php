@@ -40,15 +40,15 @@ class Setup extends Command
             Artisan::call('key:generate');
         }
         $doMigrate = $this->choice(
-        'Хотите чтобы я сделал миграции?',
-        ['Да', 'Нет'],
-        '0',
+            'Хотите чтобы я сделал миграции?',
+            ['Да', 'Нет'],
+            '0',
         );
-        if ($doMigrate == 'Да' ) {
-          $this->info('Запускаю migrate...');
-          Artisan::call('migrate');
-          dump(Artisan::output());
-          $this->info('готово.');
+        if ($doMigrate == 'Да') {
+            $this->info('Запускаю migrate...');
+            Artisan::call('migrate');
+            dump(Artisan::output());
+            $this->info('готово.');
         }
 
         return 0;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Invoice;
-use App\Services\Payment\Service as InvoiceService;
+use App\Services\Invoice\Service as InvoiceService;
 use App\Services\Client\Service;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
@@ -23,8 +23,6 @@ class HomeController extends Controller
 
     public function index(Invoice $invoice, Client $client, Service $service, InvoiceService $invoiceService)
     {
-        $invoice = Invoice::all();
-        $client = Client::all();
         $invoiceSum = $this->invoiceService->getBalanceSum();
         $invoiceAvg = $this->invoiceService->getBalanceAvg();
         $clientsCount = $this->service->getClientsCount();
