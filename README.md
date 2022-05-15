@@ -1,4 +1,4 @@
-<img align="right" src="https://user-images.githubusercontent.com/1161809/164568130-eb657c42-995a-4baf-a1f5-aa6a03749787.png" >
+<img align="right" width=105 height=48 src="https://user-images.githubusercontent.com/1161809/164568130-eb657c42-995a-4baf-a1f5-aa6a03749787.png" >
 
 Sample app for learn Laravel framework.
 
@@ -7,6 +7,10 @@ Sample app for learn Laravel framework.
 This application is created in order to learn the basics of the Laravel framework and at the same time solve some practical problem for myself.
 
 The idea behind the app is to keep track of clients and jobs for a self-employed IT professional these days. It is also planned to implement accounting of projects and time spent. It is also a list of services, calculation of payments by clients and so on.
+
+![Главный экран приложения](https://user-images.githubusercontent.com/1161809/168465242-08e52d24-72cb-469f-9344-8baf65913434.png)
+
+
 ### Requirements
 * PHP 8.1
 * SQLite 3
