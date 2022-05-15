@@ -19,6 +19,6 @@ class Service
     }
     public function getClientsCount(): int
     {
-        return DB::table('client')->count();
+        return DB::table('clients')->count();
     }
 }

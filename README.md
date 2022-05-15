@@ -26,6 +26,7 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * App on: http://127.0.0.1:8000
 
 To see all commands for setup RV HDESK just type `php artisan list RV`
+To run tests: `php artisan test`
 
 
 
