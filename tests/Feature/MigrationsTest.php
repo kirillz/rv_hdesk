@@ -29,10 +29,14 @@ class MigrationsTest extends TestCase
         $this->assertTrue(Schema::hasTable('payments'));
     }
 
-    public function test_columns_exists()
+    public function test_columns_clients_exists()
     {  // FIXME: дописать тест на все табликолонки всех таблиц
         $this->assertTrue(Schema::hasColumns('clients', ['invoice_id', 'task_id', 'name', 'email', 'address1', 'address2', 'city', 'state', 'postal_code']));
-        //         $this->assertTrue(Schema::hasColumns('invoices', [...]));
+    }
+
+    public function test_columns_invoices_exists()
+    {  // FIXME: дописать тест на все табликолонки всех таблиц
+        $this->assertTrue(Schema::hasColumns('invoices', ['client_id', 'discount', 'pers_order_number', 'invoice_number', 'invoice_date', 'tax_name1', 'tax_rate1', 'amount', 'balance', 'terms', 'public_notes', 'is_deleted', 'is_recurring', 'work_start_date', 'work_due_date', 'work_end_date', 'pay_due_date', 'last_sent_date', 'recurring_invoice_id']));
     }
 
     public function test_soft_delete()
