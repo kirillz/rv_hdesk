@@ -8,7 +8,6 @@ This application is created in order to learn the basics of the Laravel framewor
 
 The idea behind the app is to keep track of clients and jobs for a self-employed IT professional these days. It is also planned to implement accounting of projects and time spent. It is also a list of services, calculation of payments by clients and so on.
 
-![Главный экран приложения](https://user-images.githubusercontent.com/1161809/168465242-08e52d24-72cb-469f-9344-8baf65913434.png)
 
 
 ### Requirements
