@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+      @include('layouts.partials.error')
         <h3>Изменение Клиента</h3>
         <hr class="hr-primary"/>
         <div class="row">
