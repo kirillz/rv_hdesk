@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'include_fluent' => false,
+    'include_fluent' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -139,7 +139,7 @@ return [
     */
 
     'model_locations' => [
-        'app',
+        'app/Models',
     ],
 
     /*
