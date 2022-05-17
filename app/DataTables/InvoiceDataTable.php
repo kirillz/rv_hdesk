@@ -81,8 +81,8 @@ class InvoiceDataTable extends DataTable
             Column::make('invoice_date')->title('Дата создания'),
             Column::make('work_start_date')->title('Дата начала работ'),
             Column::make('work_due_date')->title('Дата окончания'),
-            Column::make('amount')->title('Кол-во'),
-            Column::make('balance')->title('Баланс счета ₽'),
+            Column::make('amount')->title('Сумма счетов'),
+            Column::make('balance')->title('Баланс тек.счета'),
         ];
     }
 
@@ -93,6 +93,6 @@ class InvoiceDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Invoice_' . date('Ymd');
+        return 'Invoice_' . date('dmY');
     }
 }

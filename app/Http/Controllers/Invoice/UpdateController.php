@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Invoice;
 use App\Http\Requests\Invoice\UpdateRequest;
 use App\Models\Invoice;
 
-
 class UpdateController extends BaseController
 {
     public function __invoke(UpdateRequest  $request, Invoice $invoice)

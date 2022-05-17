@@ -15,12 +15,11 @@ class PaymentFactory extends Factory
     public function definition()
     {
         $paymentIds = Payment::all()->pluck('id')->toArray();
-
         return [
-            'client_id' => $this->faker->randomElement($paymentIds),
-            'invoice_id' => $this->faker->numberBetween(0, 999999),
-            'amount' => $this->faker->numberBetween(0, 10),
-            'payment_date' => $this->faker->dateTimeInInterval('-30', '+7', 'Europe/Moscow'),
-        ];
+      'client_id' => $this->faker->randomElement($paymentIds),
+      'invoice_id' => $this->faker->numberBetween(0, 999999),
+      'amount' => $this->faker->numberBetween(0, 10000),
+      'payment_date' => $this->faker->dateTimeInInterval('now', '+3 week', 'Europe/Moscow'),
+    ];
     }
 }

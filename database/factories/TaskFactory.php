@@ -20,8 +20,8 @@ class TaskFactory extends Factory
             'task_id' => $this->faker->randomElement($taskIds),
             'name' => $this->faker->sentence(2, false),
             'description' => $this->faker->sentence(4, true),
-            'start_date' => $this->faker->dateTimeInInterval('-30', '+7', 'Europe/Moscow'),
-            'due_date' => $this->faker->dateTimeInInterval('-30', '+7', 'Europe/Moscow'),
+            'start_date' => $this->faker->date('d-m-Y', 'now'),
+            'due_date' => $this->faker->date('d-m-Y', '+7'),
        ];
     }
 }
