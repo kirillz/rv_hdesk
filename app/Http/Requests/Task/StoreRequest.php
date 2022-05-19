@@ -28,8 +28,9 @@ class StoreRequest extends FormRequest
             'name' => 'string',
             'description' => 'string',
             'address2' => 'string',
-            'start_date' => 'date',
-            'due_date' => 'date',
+            'task_start_date' => 'string',
+            'task_due_date' => 'string',
+            'task_end_date' => 'string',
         ];
     }
 }
