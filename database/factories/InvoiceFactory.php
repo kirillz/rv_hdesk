@@ -27,9 +27,6 @@ class InvoiceFactory extends Factory
             'pers_order_number' => $this->faker->numberBetween(5000, 10000),
             'pay_due_date' => $this->faker->dateTimeInInterval('now', '+1 month', 'Europe/Moscow'),
             'invoice_date' => $this->faker->dateTimeInInterval('-3 days', '+8 hours', 'Europe/Moscow'),
-            'work_start_date' => $this->faker->dateTimeInInterval('now', '+3 day', 'Europe/Moscow'),
-            'work_due_date' => $this->faker->dateTimeInInterval('now', '+1 month', 'Europe/Moscow'),
-            'work_end_date' => $this->faker->dateTimeInInterval('now', '+2 month', 'Europe/Moscow'),
             'amount' => $this->faker->numberBetween(0, 99),
             'balance' => $this->faker->numberBetween(0, 9999),
         ];

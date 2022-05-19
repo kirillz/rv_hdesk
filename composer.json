@@ -1,14 +1,20 @@
 {
-  "name": "laravel/laravel",
-  "type": "project",
-  "description": "The Laravel Framework.",
+  "description": "Invoices app built with Laravel",
   "keywords": [
-    "framework",
+    "invoice",
     "laravel"
   ],
   "license": "MIT",
+  "authors": [
+    {
+      "name": "Kirill Z",
+      "email": "kzasorin@gmail.com"
+    }
+  ],
   "require": {
-    "php": "^8.0",
+    "php": "^8.1",
+    "ext-json": "*",
+    "anahkiasen/former": "^4.7",
     "barryvdh/laravel-snappy": "^1.0",
     "doctrine/dbal": "^3.3",
     "fruitcake/laravel-cors": "^2.0",
@@ -59,7 +65,8 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-create-project-cmd": [
-      "@php artisan key:generate --ansi"
+      "@php artisan key:generate --ansi",
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
   },
   "extra": {

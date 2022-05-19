@@ -30,9 +30,6 @@ class CreateInvoicesTable extends Migration
             $table->boolean('is_deleted')->default(false);
             $table->boolean('is_recurring')->default(false);
             //$table->unsignedInteger('frequency_id');
-            $table->date('work_start_date')->nullable();
-            $table->date('work_due_date')->nullable();
-            $table->date('work_end_date')->nullable();
             $table->date('pay_due_date')->nullable();
             $table->date('last_sent_date')->nullable();
             $table->unsignedInteger('recurring_invoice_id')->index()->nullable();
@@ -45,7 +42,7 @@ class CreateInvoicesTable extends Migration
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             //$table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('invoice_status_id')->references('id')->on('invoice_statuses');
+
             //$table->foreign('recurring_invoice_id')->references('id')->on('invoices')->onDelete('cascade');
 
         });

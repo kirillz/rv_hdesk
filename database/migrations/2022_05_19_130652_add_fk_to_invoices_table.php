@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInvoiceStatusesTable extends Migration
+class AddFKtoInvoicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateInvoiceStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('invoice_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable();
+        Schema::table('invoices', function (Blueprint $table) {
+            //
+            $table->foreign('invoice_status_id')->references('id')->on('invoice_statuses');
         });
     }
 
@@ -26,9 +26,8 @@ class CreateInvoiceStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('invoice_statuses');
+        Schema::table('invoices', function (Blueprint $table) {
+            //
+        });
     }
-}
-
-;
+};

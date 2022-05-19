@@ -22,7 +22,8 @@ class Service
     }
     public function getBalanceAvg()
     {
-        return Invoice::query()->avg('balance');
+        return DB::table('invoices')
+        ->avg('balance');
     }
     public function getInvoicesCount()
     {
