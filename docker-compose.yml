@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  nginx:
+    image : nginx:latest
+    volumes:
+      - ./:/var/www/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    ports :
+      - "8888:80"
+    depends_on :
+        - app
+    container_name : project_nginx
+
+  app:
+    build:
+        context: .
+        dockerfile: _docker/app/Dockerfile
+    volumes:
+      - ./:/var/www
+    container_name: project_app
