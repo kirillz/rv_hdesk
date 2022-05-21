@@ -28,7 +28,8 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * `php artisan serve` - integrated server.
 * App on: http://127.0.0.1:8000
 ### Docker
-`docker-compose up -d`
+`docker-compose up -d` thengo to this link: 
+http://127.0.0.1:8888/
 
 To see all commands for setup RV HDESK just type `php artisan list RV`
 To run tests: `php artisan test`

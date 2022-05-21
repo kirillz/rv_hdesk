@@ -3,6 +3,7 @@
 /.vscode
 /public/hot
 /public/storage
+/public/css/app.css
 /storage/*.key
 /vendor
 .php-cs-fixer.php
