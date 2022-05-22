@@ -1,5 +1,7 @@
 FROM php:8.1-fpm
 
+WORKDIR /var/www
+
 RUN apt-get update && apt-get install -y \
       apt-utils \
       libpq-dev \
@@ -16,10 +18,18 @@ RUN apt-get update && apt-get install -y \
 
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 
+
+
 # Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
+# Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - 
+RUN apt-get install -y nodejs
+
+
+
 
 WORKDIR /var/www
