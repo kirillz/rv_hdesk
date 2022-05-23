@@ -26,8 +26,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
 # Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - 
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
+RUN npm run dev # compile assets first time by Laravel Mix
 
 
 
