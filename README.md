@@ -30,7 +30,8 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * App on: http://127.0.0.1:8000
 ### Docker
 * `docker-compose build` to build image
-* `docker exec -it project_app` to enter the docker command promt
+* `docker-compose up -d` to start image
+* `docker exec -it project_app sh` to enter the docker command promt
 * `chmod 777 -R storage bootstrap/cache` to run it inside docker container to give permissions to write logs
 * run installation process in ***Installation*** section
 * `docker-compose up -d` then go to this link: 
