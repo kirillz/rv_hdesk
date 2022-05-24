@@ -27,19 +27,16 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 * `php artisan RV:demo-data` - for demo data.
 * `php artisan serve` - integrated server.
 * App on: http://127.0.0.1:8000
-### Docker
-* `docker-compose build` to build image
-* `docker-compose up -d` to start image
-* `docker exec -it project_app sh` to enter the docker command promt
-* `chmod 777 -R storage bootstrap/cache` to run it inside docker container to give permissions to write logs
-* run installation process in ***Installation*** section
-* `docker-compose up -d` then go to this link: 
-http://127.0.0.1:8888/
 
-To see all commands for setup RV HDESK just type `php artisan list RV`
-To run tests: `php artisan test`
+`php artisan list RV` - To see all commands for RV HDESK  
+`php artisan test` - To run tests
 
-
+### Docker (Lando)
+* Install [Lando](https://github.com/lando/lando/releases) 
+* `cd rv_hdesk`
+* `lando start` - to start all containers
+* `lando poweroff` - to stop
+* `lando destroy -y` - delete everything
 
 Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" >
 <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" >
