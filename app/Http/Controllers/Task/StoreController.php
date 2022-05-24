@@ -13,5 +13,4 @@ class StoreController extends BaseController
 
         return redirect()->route('task.index');
     }
-
 }

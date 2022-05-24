@@ -18,7 +18,6 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 ### :hammer_and_wrench: Installation
 * Install [Composer](https://getcomposer.org/) and [Npm](https://nodejs.org/)
 * Clone the repository: `git clone https://github.com/kirillz/rv_hdesk.git`
-* Install dependencies:  
 * `cd rv_hdesk`
 * `composer install`  - for dependencies
 * `npm install` - for node modules

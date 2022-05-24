@@ -14,5 +14,4 @@ class UpdateController extends BaseController
         $this->service->update($task, $data);
         return redirect()->route('task.show', $task->id);
     }
-
 }

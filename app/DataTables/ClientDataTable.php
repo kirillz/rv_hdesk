@@ -19,14 +19,14 @@ class ClientDataTable extends DataTable
      */
     public function dataTable($query)
     {
-          return datatables()
+        return datatables()
             ->eloquent($query)
             ->rawColumns(['action', 'name'])
-            ->addColumn('name', function(Client $client){
-              return '<a href="' . route('client.show' , $client->id) .'">' . $client->name . '</a>';
+            ->addColumn('name', function (Client $client) {
+                return '<a href="' . route('client.show', $client->id) .'">' . $client->name . '</a>';
             })
-            ->addColumn('action', function(Client $client){
-                return '<a href="' . route('client.edit' , $client->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('client.delete' , $client->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            ->addColumn('action', function (Client $client) {
+                return '<a href="' . route('client.edit', $client->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('client.delete', $client->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
             });
     }
 
@@ -101,6 +101,7 @@ class ClientDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Client_' . date('YmdHis');
+        //return 'Client_' . date('YmdHis');
+        return 'Client_' . date('Ymd');
     }
 }

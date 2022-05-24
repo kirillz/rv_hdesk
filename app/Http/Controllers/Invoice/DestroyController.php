@@ -15,5 +15,4 @@ class DestroyController extends BaseController
         $invoice->delete();
         return redirect()->route('invoice.index');
     }
-
 }

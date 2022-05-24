@@ -4,4 +4,6 @@ https://github.com/slonopotamus/stevedore
 
 docker-compose up -d               // Поднять все контейнеры
 docker-compose down                // Остановить все
-docker run -it project_nginx bash  // Перейти внутрь контейнера c nginx
+docker exec project_nginx bash     // Перейти внутрь контейнера c nginx
+docker exec project_nginx -s reload
+

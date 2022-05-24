@@ -8,19 +8,19 @@ use Illuminate\Support\Facades\Artisan;
 
 class Setup extends Command
 {
-  /**
-   * The name and signature of the console command.
-   *
-   * @var string
-   */
-  protected $signature = 'RV:setup';
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'RV:setup';
 
-  /**
-   * The console command description.
-   *
-   * @var string
-   */
-  protected $description = 'Настроить только что установленное приложение';
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Настроить только что установленное приложение';
 
     /**
      * Execute the console command.
@@ -53,11 +53,4 @@ class Setup extends Command
 
         return 0;
     }
-    if (empty($keyGenerated)) {
-      $this->info('Создаю ключ key:generate');
-      Artisan::call('key:generate');
-    }
-
-    return 0;
-  }
 }

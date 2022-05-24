@@ -37,8 +37,8 @@ class CreateClientsTable extends Migration
             $table->index('invoice_id', 'client_invoice_idx');
             $table->index('task_id', 'client_task_idx');
 
-            $table->foreign('invoice_id','client_invoice_fk')->on('invoices')->references('id')->onDelete('cascade');
-            $table->foreign('task_id','client_task_fk')->on('tasks')->references('id')->onDelete('cascade');
+            $table->foreign('invoice_id', 'client_invoice_fk')->on('invoices')->references('id')->onDelete('cascade');
+            $table->foreign('task_id', 'client_task_fk')->on('tasks')->references('id')->onDelete('cascade');
         });
     }
 

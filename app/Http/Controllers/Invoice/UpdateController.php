@@ -14,5 +14,4 @@ class UpdateController extends BaseController
 
         return redirect()->route('invoice.show', $invoice->id);
     }
-
 }

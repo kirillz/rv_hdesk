@@ -14,5 +14,4 @@ class IndexController extends BaseController
         $invoices = Invoice::all();
         return $dataTable->render('invoice.index', compact('invoices'));
     }
-
 }

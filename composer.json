@@ -23,10 +23,10 @@
     "laravel/sanctum": "^2.11",
     "laravel/tinker": "^2.5",
     "laravel/ui": "^3.4",
+    "stechstudio/laravel-php-cs-fixer": "^3.1",
     "yajra/laravel-datatables": "1.5",
     "yajra/laravel-datatables-html": "^4.41",
-    "yajra/laravel-datatables-oracle": "~9.0",
-    "ext-json": "*"
+    "yajra/laravel-datatables-oracle": "~9.0"
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.6",

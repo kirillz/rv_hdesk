@@ -15,5 +15,4 @@ class CreateController extends BaseController
         $invoice = Invoice::all();
         return view('invoice.create', compact('invoice'));
     }
-
 }
