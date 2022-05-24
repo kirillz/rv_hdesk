@@ -1,4 +1,5 @@
 <?php
+
 // Константы
 
 if (!defined('APP_NAME')) {
@@ -9,7 +10,5 @@ if (!defined('APP_NAME')) {
     define('SITE_URL', env('APP_URL'));
     define('DB_CONNECTION', env('DB_CONNECTION', 'sqlite'));
     define('DB_FOREIGN_KEYS', env('DB_FOREIGN_KEYS', 'true'));
-
-
-
+    define('FACTORY_COUNT', env('FACTORY_COUNT', 10));
 }

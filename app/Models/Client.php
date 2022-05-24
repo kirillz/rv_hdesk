@@ -16,7 +16,7 @@ class Client extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'client';
+    protected $table = 'clients';
     protected $guarded = false;
 
     public function invoices(): HasMany

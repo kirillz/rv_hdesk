@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Client;
+
 use App\Http\Requests\Client\StoreRequest;
 
 class StoreController extends BaseController

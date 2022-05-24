@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+      @include('layouts.partials.error')
         <h3>Счета</h3>
         <div class="row">
 
@@ -10,47 +11,51 @@
                 @method('patch')
                 <div class="col-md-6">
                     <label for="invoice_number" class="form-label">Номер счета</label>
-                    <input type="text" name="invoice_number" class="form-control" id="invoice_number" placeholder="Номер счета">
+                    <input type="text" name="invoice_number" value="{{ $invoice->invoice_number }}" class="form-control" id="invoice_number" placeholder="Номер счета">
                 </div>
                 <div class="col-md-3">
                     <label for="invoice_date" class="form-label">Дата создания</label>
-                    <input type="text" name="invoice_date" class="form-control" id="invoice_date" placeholder="Дата создания">
+                    <input type="text" name="invoice_date" value="{{ $invoice->invoice_date }}" class="form-control" id="invoice_date" placeholder="Дата создания">
                 </div>
                 <div class="col-md-3">
-                    <label for="due_date" class="form-label">Дата оплаты</label>
-                    <input type="text" name="due_date" class="form-control" id="due_date" placeholder="Дата оплаты">
+                    <label for="pay_due_date" class="form-label">Жел Дата оплаты</label>
+                    <input type="text" name="pay_due_date" value="{{ $invoice->pay_due_date }}" class="form-control" id="pay_due_date" placeholder="Дата оплаты">
                 </div>
                 <div class="col-6">
                     <label for="terms" class="form-label">Условия оплаты</label>
-                    <input type="text" name="terms" class="form-control" id="terms" placeholder="Условия оплаты">
+                    <input type="text" name="terms" value="{{ $invoice->terms }}" class="form-control" id="terms" placeholder="Условия оплаты">
                 </div>
                 <div class="col-md-3">
-                    <label for="start_date" class="form-label">Дата начала работ</label>
-                    <input type="text" name="start_date" class="form-control" id="start_date" placeholder="Начало">
+                    <label for="work_start_date" class="form-label">Дата начала работ</label>
+                    <input type="text" name="work_start_date" value="{{ $invoice->work_start_date }}" class="form-control" id="work_start_date" placeholder="Начало">
+                </div>
+              <div class="col-md-3">
+                <label for="work_due_date" class="form-label">Желательно завершить до</label>
+                <input type="text" name="work_due_date" value="{{ $invoice->work_due_date }}" class="form-control" id="work_due_date" placeholder="Желательно завершить до">
+              </div>
+                <div class="col-md-3">
+                    <label for="work_end_date" class="form-label">Факт завершения работ</label>
+                    <input type="text" name="work_end_date" value="{{ $invoice->work_end_date }}" class="form-control" id="work_end_date" placeholder="Завершение">
                 </div>
                 <div class="col-md-3">
-                    <label for="end_date" class="form-label">Дата завершения работ</label>
-                    <input type="text" name="end_date" class="form-control" id="end_date" placeholder="Завершение">
-                </div>
-                <div class="col-md-3">
-                    <label for="end_date" class="form-label">Название налога</label>
-                    <input type="text" name="end_date" class="form-control" id="end_date" placeholder="Название налога">
+                    <label for="tax_name1" class="form-label">Название налога</label>
+                    <input type="text" name="tax_name1" value="{{ $invoice->tax_name1 }}" class="form-control" id="tax_name1" placeholder="Название налога">
                 </div>
                 <div class="col-md-3">
                     <label for="tax_rate1" class="form-label">% по налогу</label>
-                    <input type="text" name="tax_rate1" class="form-control" id="tax_rate1" placeholder="% по налогу">
+                    <input type="text" name="tax_rate1" value="{{ $invoice->tax_rate1 }}" class="form-control" id="tax_rate1" placeholder="% по налогу">
                 </div>
                 <div class="col-md-3">
                     <label for="amount" class="form-label">Количество</label>
-                    <input type="text" name="amount" class="form-control" id="amount" placeholder="Количество">
+                    <input type="text" name="amount" value="{{ $invoice->amount }}" class="form-control" id="amount" placeholder="Количество">
                 </div>
                 <div class="col-md-3">
                     <label for="balance" class="form-label">Остаток средств</label>
-                    <input type="text" name="balance" class="form-control" id="balance" placeholder="Остаток средств">
+                    <input type="text" name="balance" value="{{ $invoice->balance }}" class="form-control" id="balance" placeholder="Остаток средств">
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="is_deleted">
+                        <input class="form-check-input" type="checkbox" value="{{ $invoice->is_deleted }}" id="is_deleted">
                         <label class="form-check-label" for="is_deleted">
                             Помечен на Удаление?
                         </label>
@@ -58,7 +63,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="is_recurring">
+                        <input class="form-check-input" type="checkbox"  value="{{ $invoice->is_recurring }}" id="is_recurring">
                         <label class="form-check-label" for="is_recurring">
                             Является периодическим?
                         </label>

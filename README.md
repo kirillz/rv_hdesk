@@ -1,4 +1,4 @@
-<img align="right" src="https://user-images.githubusercontent.com/1161809/164568130-eb657c42-995a-4baf-a1f5-aa6a03749787.png" >
+<img align="right" width=105 height=48 src="https://user-images.githubusercontent.com/1161809/164568130-eb657c42-995a-4baf-a1f5-aa6a03749787.png" >
 
 Sample app for learn Laravel framework.
 
@@ -7,6 +7,9 @@ Sample app for learn Laravel framework.
 This application is created in order to learn the basics of the Laravel framework and at the same time solve some practical problem for myself.
 
 The idea behind the app is to keep track of clients and jobs for a self-employed IT professional these days. It is also planned to implement accounting of projects and time spent. It is also a list of services, calculation of payments by clients and so on.
+
+
+
 ### Requirements
 * PHP 8.1
 * SQLite 3
@@ -15,15 +18,25 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 ### :hammer_and_wrench: Installation
 * Install [Composer](https://getcomposer.org/) and [Npm](https://nodejs.org/)
 * Clone the repository: `git clone https://github.com/kirillz/rv_hdesk.git`
-* Install dependencies:  
 * `cd rv_hdesk`
-* `composer install`  
-* `npm install`  
-* `npm run dev`
-* Rename or move .env.example: `mv .env.example .env`
-* To see all commands for setup RV HDESK just type `php artisan list RV`
-* then type `php artisan RV:setup`
+* `composer install`  - for dependencies
+* `npm install` - for node modules
+* `npm run dev` - for compile assets by Laravel Mix.
+* `cp .env.example .env` - copy or move .env.example to .env
+* `php artisan RV:setup` - first run helper.
+* `php artisan RV:demo-data` - for demo data.
+* `php artisan serve` - integrated server.
 * App on: http://127.0.0.1:8000
+
+`php artisan list RV` - To see all commands for RV HDESK  
+`php artisan test` - To run tests
+
+### Docker (Lando)
+* Install [Lando](https://github.com/lando/lando/releases) 
+* `cd rv_hdesk`
+* `lando start` - to start all containers
+* `lando poweroff` - to stop
+* `lando destroy -y` - delete everything
 
 Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" >
 <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" >

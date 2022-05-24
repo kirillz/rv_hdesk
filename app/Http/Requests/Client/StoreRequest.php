@@ -31,7 +31,6 @@ class StoreRequest extends FormRequest
             'city' => 'string',
             'state' => 'string',
             'postal_code' => 'integer',
-            'invoice_id' =>'integer',
         ];
     }
 }

@@ -3,6 +3,7 @@
         <a class="navbar-brand" href="{{ route('home.index') }}">
             <img src="/img/logo.svg" alt="" width="100%" height="60" class="d-inline-block">
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,10 +18,15 @@
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('invoice.index') }}">Счета</a>
                 </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="{{ route('payment.index') }}">Оплаты</a>
+              </li>
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('task.index') }}">Задачи</a>
                 </li>
             </ul>
         </div>
+      <span class="version">v {{ config('app.version') }}</span>
     </div>
 </nav>
+

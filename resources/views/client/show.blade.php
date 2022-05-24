@@ -48,13 +48,28 @@
     </div>
   <div class="mb-4">
     <div class="shadow p-3 mb-5 bg-body rounded text-end">
+
       <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Активная</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Длинная ссылка навигации</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Ссылка</a>
+{{--        {!! Form::tab_link('#activity', true) !!}--}}
+{{--        @if ($hasTasks)--}}
+{{--          {!! Form::tab_link('#tasks', trans('texts.tasks')) !!}--}}
+{{--        @endif--}}
+{{--        @if ($hasExpenses)--}}
+{{--          {!! Form::tab_link('#expenses', trans('texts.expenses')) !!}--}}
+{{--        @endif--}}
+{{--        @if ($hasQuotes)--}}
+{{--          {!! Form::tab_link('#quotes', trans('texts.quotes')) !!}--}}
+{{--        @endif--}}
+{{--        @if ($hasRecurringInvoices)--}}
+{{--          {!! Form::tab_link('#recurring_invoices', trans('texts.recurring')) !!}--}}
+{{--        @endif--}}
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Активность</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Счета</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Оплаты</a>
         <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
       </nav>
     </div>
   </div>
+
 
 @endsection

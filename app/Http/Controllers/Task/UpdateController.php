@@ -2,24 +2,16 @@
 
 namespace App\Http\Controllers\Task;
 
+use App\Http\Requests\Task\UpdateRequest;
 use App\Models\Task;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Controller;
 
-
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
-
-        public function __invoke(Task $task): RedirectResponse
-        {
-        $data = request()->validate([
-            'name' => 'string',
-            'description' => 'string',
-            'start_date' => 'date',
-            'due_date' => 'date',
-        ]);
-        $task->update($data);
+    public function __invoke(UpdateRequest $request, Task $task): RedirectResponse
+    {
+        $data = $request->validated();
+        $this->service->update($task, $data);
         return redirect()->route('task.show', $task->id);
     }
-
 }

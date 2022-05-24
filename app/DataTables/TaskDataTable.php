@@ -2,7 +2,6 @@
 
 namespace App\DataTables;
 
-
 use App\Models\Task;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
@@ -21,8 +20,8 @@ class TaskDataTable extends DataTable
         return datatables()
             ->eloquent($query)
             ->rawColumns(['action'])
-            ->addColumn('action', function(Task $task){
-                return '<a href="' . route('task.edit' , $task->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('task.delete' , $task->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
+            ->addColumn('action', function (Task $task) {
+                return '<a href="' . route('task.edit', $task->id) .'" class="btn btn-outline-secondary btn-sm">Ред.</a><a href="' . route('task.delete', $task->id) .'" class="btn btn-outline-danger btn-sm">уд.</a>';
             });
     }
 
@@ -77,8 +76,8 @@ class TaskDataTable extends DataTable
             Column::make('id')->title('№')->width(50),
             Column::make('name')->title('Задача')->width(100),
             Column::make('description')->title('Описание задачи')->width(300),
-            Column::make('start_date')->title('Начать')->width(100),
-            Column::make('due_date')->title('Окончить до')->width(100),
+            Column::make('task_start_date')->title('Начать')->width(100),
+            Column::make('task_due_date')->title('Окончить до')->width(100),
             //Column::make('created_at'),
             //Column::make('updated_at'),
         ];

@@ -13,5 +13,4 @@ class ShowController extends BaseController
         //dd($invoice->name);
         return view('client.show', compact('client'));
     }
-
 }

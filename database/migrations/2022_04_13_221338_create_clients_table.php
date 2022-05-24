@@ -13,9 +13,12 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('client');
+        Schema::dropIfExists('clients');
+        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('payments');
 
-        Schema::create('client', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('invoice_id')->nullable();
             $table->unsignedBigInteger('task_id')->nullable();
@@ -34,8 +37,8 @@ class CreateClientsTable extends Migration
             $table->index('invoice_id', 'client_invoice_idx');
             $table->index('task_id', 'client_task_idx');
 
-            $table->foreign('invoice_id','client_invoice_fk')->on('invoices')->references('id')->onDelete('cascade');
-            $table->foreign('task_id','client_task_fk')->on('tasks')->references('id')->onDelete('cascade');
+            $table->foreign('invoice_id', 'client_invoice_fk')->on('invoices')->references('id')->onDelete('cascade');
+            $table->foreign('task_id', 'client_task_fk')->on('tasks')->references('id')->onDelete('cascade');
         });
     }
 
@@ -47,6 +50,6 @@ class CreateClientsTable extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('client');
+        Schema::dropIfExists('clients');
     }
 }

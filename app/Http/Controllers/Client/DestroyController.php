@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Client;
+
 use App\Models\Client;
 use Illuminate\Routing\Controller;
-
 
 class DestroyController extends BaseController
 {

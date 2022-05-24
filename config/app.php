@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Revive HDESK'),
+    'version' => '0.0.5',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,12 +162,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Yajra\DataTables\DataTablesServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
-
+        Yajra\DataTables\DataTablesServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         /*
          * Application Service Providers...
          */

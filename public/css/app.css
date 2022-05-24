@@ -902,9 +902,19 @@ hr {
   color: #337ab7;
 }
 
+.in-bold-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  color: #337ab7;
+}
+
 .in-thin {
   font-size: 20px;
   font-weight: 100;
+  margin-bottom: 4px;
 }
 
 .currency-left {
@@ -922,6 +932,14 @@ hr {
   justify-content: space-between;
   padding: 0 20px 0 0;
   color: #337ab7;
+}
+
+.version {
+  width: 50px;
+  font-size: 14px;
+  margin-top: -50px;
+  color: #f95151;
+  z-index: 2;
 }
 
 /*!

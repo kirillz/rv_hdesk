@@ -25,14 +25,13 @@ class CreateInvoicesTable extends Migration
             $table->decimal('tax_rate1', 13, 3)->nullable();
             $table->decimal('amount', 13, 2)->nullable();
             $table->decimal('balance', 13, 2)->nullable();
-            $table->text('terms');
-            $table->text('public_notes');
+            $table->text('terms')->nullable();
+            $table->text('public_notes')->nullable();
             $table->boolean('is_deleted')->default(false);
             $table->boolean('is_recurring')->default(false);
             //$table->unsignedInteger('frequency_id');
-            $table->date('work_start_date')->nullable();
-            $table->date('work_due_date')->nullable();
-            $table->timestamp('last_sent_date')->nullable();
+            $table->date('pay_due_date')->nullable();
+            $table->date('last_sent_date')->nullable();
             $table->unsignedInteger('recurring_invoice_id')->index()->nullable();
 
             $table->timestamps();
@@ -40,12 +39,11 @@ class CreateInvoicesTable extends Migration
 
 
 
-            $table->foreign('client_id')->references('id')->on('client')->onDelete('cascade');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             //$table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            //$table->foreign('invoice_status_id')->references('id')->on('invoice_statuses');
-            //$table->foreign('recurring_invoice_id')->references('id')->on('invoices')->onDelete('cascade');
 
+            //$table->foreign('recurring_invoice_id')->references('id')->on('invoices')->onDelete('cascade');
         });
     }
 

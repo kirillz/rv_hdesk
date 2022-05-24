@@ -13,5 +13,4 @@ class ShowController extends Controller
         //dd($invoice->name);
         return view('task.show', compact('task'));
     }
-
 }

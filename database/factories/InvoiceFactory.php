@@ -18,18 +18,17 @@ class InvoiceFactory extends Factory
 
         return [
             'client_id' => $this->faker->randomElement($invoiceIds),
-            'invoice_number' => $this->faker->numberBetween(0,999999),
-            'discount' => $this->faker->numberBetween(0,10),
-            'terms' => $this->faker->sentence(4,true),
-            'public_notes' => $this->faker->sentence(4,true),
-            'tax_name1' => $this->faker->sentence(4,true),
-            'tax_rate1' => $this->faker->sentence(4,true),
-            'pers_order_number' => $this->faker->numberBetween(5000,10000),
-            'invoice_date' => $this->faker->dateTimeInInterval('-30','+7','Europe/Moscow'),
-            'work_start_date' => $this->faker->dateTimeInInterval('-30','+7','Europe/Moscow'),
-            'work_due_date' => $this->faker->dateTimeInInterval('-30','+7','Europe/Moscow'),
-            'amount' => $this->faker->numberBetween(0,999999),
-            'balance' => $this->faker->numberBetween(0,999999),
+            'invoice_number' => $this->faker->numberBetween(0, 999999),
+            'discount' => $this->faker->numberBetween(0, 10),
+            'terms' => $this->faker->sentence(4, true),
+            'public_notes' => $this->faker->sentence(4, true),
+            'tax_name1' => $this->faker->sentence(4, true),
+            'tax_rate1' => $this->faker->sentence(4, true),
+            'pers_order_number' => $this->faker->numberBetween(5000, 10000),
+            'pay_due_date' => $this->faker->dateTimeInInterval('now', '+1 month', 'Europe/Moscow'),
+            'invoice_date' => $this->faker->dateTimeInInterval('-3 days', '+8 hours', 'Europe/Moscow'),
+            'amount' => $this->faker->numberBetween(0, 99),
+            'balance' => $this->faker->numberBetween(0, 9999),
         ];
     }
 }
