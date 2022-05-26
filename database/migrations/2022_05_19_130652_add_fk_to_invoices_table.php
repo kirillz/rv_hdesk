@@ -27,7 +27,7 @@ class AddFKtoInvoicesTable extends Migration
     public function down()
     {
         Schema::table('invoices', function (Blueprint $table) {
-            //
+            // FIXME:  SQLite doesn't support dropping foreign keys (you would need to re-create the table).
         });
     }
 };

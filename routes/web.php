@@ -65,5 +65,5 @@ Route::group(['namespace' => 'Payment'], function () {
     Route::delete('/payments/{payment}', 'DestroyController')->name('payment.delete');
 });
 
-//// Include static app constants
-//require_once app_path() . '/Constants.php';
+//// Include static app constants /app/Constants.php
+require_once app_path('/Constants.php');
