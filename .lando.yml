@@ -7,6 +7,9 @@ config:
   composer_version: 2-latest
   run:
       - composer install
+      - cp .env.example .env
+      - php artisan RV:setup
+      - php artisan RV:demo-data
   node:
     type: node:16
     build:
@@ -18,4 +21,12 @@ services:
   nodejs:
     type: node:16
     command: npm start
-
+    build_as_root:
+      - npm install
+      - npm run dev
+  appserver:
+    build_as_root:
+      - composer install
+      - cp .env.example .env
+      - php artisan RV:setup
+      - php artisan RV:demo-data
