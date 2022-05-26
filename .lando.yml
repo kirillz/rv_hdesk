@@ -14,5 +14,8 @@ config:
   via: nginx:1.18
   app_mount: delegated
   database: mysql:8.0
-  run_as_root:
-      - echo "127.0.0.1 rv_hdesk.lndo.site" >> /etc/hosts
+services:
+  nodejs:
+    type: node:16
+    command: npm start
+
