@@ -77,6 +77,7 @@ class InvoiceDataTable extends DataTable
                   ->addClass('text-center'),
             //Column::make('id'),
             Column::make('invoice_number')->title('№ Счета'),
+            Column::make('invoice_status_id')->title('Статус'),
             Column::make('discount')->title('Скидка(%)'),
             Column::make('invoice_date')->title('Дата создания'),
             Column::make('amount')->title('Сумма счетов'),

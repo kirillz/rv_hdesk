@@ -25,6 +25,7 @@ class UpdateRequest extends FormRequest
     {
         return [
           'invoice_number' => 'string',
+          'invoice_status_id' => 'string',
           'invoice_date' => 'string',
           'pay_due_date' => 'string',
           'terms' => 'string',
