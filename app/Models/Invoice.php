@@ -20,6 +20,7 @@ class Invoice extends Model
     protected $guarded = false;
 
 
+
     public function client(): BelongsTo
     {
         return $this->belongsTo('client');
