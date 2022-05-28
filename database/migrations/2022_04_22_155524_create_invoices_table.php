@@ -16,7 +16,7 @@ class CreateInvoicesTable extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('client_id')->index()->nullable();
-
+            $table->unsignedInteger('invoice_status_id')->default(1);
             $table->float('discount')->nullable();
             $table->string('pers_order_number')->nullable();
             $table->string('invoice_number')->nullable();
