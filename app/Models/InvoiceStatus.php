@@ -13,11 +13,10 @@ class InvoiceStatus extends Model
     protected $table = 'invoice_statuses';
     protected $guarded = false;
 
-    public function invoice_status(): BelongsTo
+    public function invoice(): BelongsTo
     {
         return $this->belongsTo('invoices');
     }
-
 
     public static function getIdFromAlias($status): bool|int
     {

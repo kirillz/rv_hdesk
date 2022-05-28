@@ -13,9 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Client::factory(10)->create();
-        \App\Models\Invoice::factory(10)->create();
-        \App\Models\Task::factory(10)->create();
-        \App\Models\Payment::factory(10)->create();
+        \App\Models\Client::factory(5)->create();
+        \App\Models\Invoice::factory(5)->create();
+        \App\Models\Task::factory(5)->create();
+        \App\Models\Payment::factory(5)->create();
+
+
+        $this->call([
+        InvoiceStatusSeeder::class,
+      ]);
     }
 }

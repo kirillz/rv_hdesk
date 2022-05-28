@@ -1,9 +1,0 @@
-Windows:
-https://github.com/slonopotamus/stevedore
-скачиваем ставим. Гораздо легче стандартного докер десктопа.
-
-docker-compose up -d               // Поднять все контейнеры
-docker-compose down                // Остановить все
-docker exec project_nginx bash     // Перейти внутрь контейнера c nginx
-docker exec project_nginx -s reload
-

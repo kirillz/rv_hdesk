@@ -22,7 +22,6 @@ class TaskFactory extends Factory
             'description' => $this->faker->sentence(4, true),
             'task_start_date' => $this->faker->dateTimeInInterval('now', '+3 day', 'Europe/Moscow'),
             'task_due_date' => $this->faker->dateTimeInInterval('now', '+1 month', 'Europe/Moscow'),
-            'task_end_date' => $this->faker->dateTimeInInterval('now', '+2 month', 'Europe/Moscow'),
        ];
     }
 }
