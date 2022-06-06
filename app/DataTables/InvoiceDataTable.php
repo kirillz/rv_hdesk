@@ -36,7 +36,15 @@ class InvoiceDataTable extends DataTable
      */
     public function query(Invoice $model): \Illuminate\Database\Eloquent\Builder
     {
-        return $model->newQuery();
+          $id = (request()->segment(3))?request()->segment(3):0;
+
+          if ($id)
+          {
+             return $model->where('client_id',$id )->newQuery();
+          }
+          return $model->newQuery();
+
+
     }
 
     /**

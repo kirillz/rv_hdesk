@@ -39,6 +39,10 @@ Route::group(['namespace' => 'Invoice'], function () {
     Route::get('/invoices/{invoice}/edit', 'EditController')->name('invoice.edit');
     Route::patch('/invoices/{invoice}', 'UpdateController')->name('invoice.update');
     Route::delete('/invoices/{invoice}', 'DestroyController')->name('invoice.delete');
+    //Get invoices only for a selected client
+    Route::get('/invoices/clients/{client?}','ShowWithClientsController')->name('invoice.show_with_clients');
+
+
 });
 
 // Tasks CRUD

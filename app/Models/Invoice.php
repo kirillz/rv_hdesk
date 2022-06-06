@@ -22,6 +22,6 @@ class Invoice extends Model
 
     public function client(): BelongsTo
     {
-        return $this->belongsTo('client');
+        return $this->belongsTo(Client::class);
     }
 }
