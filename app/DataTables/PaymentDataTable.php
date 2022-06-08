@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+use App\Models\Client;
 use App\Models\Payment;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
@@ -11,7 +12,9 @@ use Yajra\DataTables\Services\DataTable;
 
 class PaymentDataTable extends DataTable
 {
-    /**
+  private ?Client $client = null;
+
+  /**
      * Build DataTable class.
      *
      * @param mixed $query Results from query() method.
@@ -38,6 +41,10 @@ class PaymentDataTable extends DataTable
      */
     public function query(Payment $model)
     {
+      if ($this->client)
+      {
+        return $model->whereBelongsTo($this->client)->newQuery();
+      }
         return $model->newQuery();
     }
 
@@ -92,6 +99,11 @@ class PaymentDataTable extends DataTable
           //Column::make('created_at')->title('Создан'),
           //Column::make('updated_at')->title('Был обновлен'),
         ];
+    }
+
+    public function addClient(Client $client)
+    {
+        $this->client = $client;
     }
 
     /**
