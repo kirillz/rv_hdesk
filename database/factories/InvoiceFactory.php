@@ -20,6 +20,7 @@ class InvoiceFactory extends Factory
         return [
             'client_id' => $this->faker->randomElement($invoiceIds),
             'invoice_number' => $this->faker->numberBetween(0, 999999),
+            'invoice_status_id' => '1',
             'discount' => $this->faker->numberBetween(0, 10),
             'terms' => $this->faker->sentence(4, true),
             'public_notes' => $this->faker->sentence(4, true),

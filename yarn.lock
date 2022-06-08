@@ -3271,7 +3271,9 @@
   "resolved" "https://registry.npmjs.org/klona/-/klona-2.0.5.tgz"
   "version" "2.0.5"
 
-"laravel-mix@^6.0.6":
+
+"laravel-mix@^6.0.43":
+
   "integrity" "sha512-SOO+C1aOpVSAUs30DYc6k/e0QJxfyD42aav4IKJtE5UZKw9ROWcVzkVoek2J475jNeNnl7GkoLAC27gejZsQ8g=="
   "resolved" "https://registry.npmjs.org/laravel-mix/-/laravel-mix-6.0.43.tgz"
   "version" "6.0.43"

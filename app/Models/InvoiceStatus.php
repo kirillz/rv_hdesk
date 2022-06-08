@@ -18,7 +18,6 @@ class InvoiceStatus extends Model
         return $this->belongsTo('invoices');
     }
 
-
     public static function getIdFromAlias($status): bool|int
     {
         return match ($status) {

@@ -22,6 +22,9 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Номер счета</th>
+
+                    <th scope="col">Статус счета</th>
+
                     <th scope="col">Создан</th>
                     <th scope="col">Жел Дата оплаты</th>
                     <th scope="col">Условия оплаты</th>
@@ -33,14 +36,15 @@
                     <th scope="col">% по налогу</th>
                     <th scope="col">Количество</th>
                     <th scope="col">Сумма</th>
-
-
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>{{ $invoice->id }}</td>
-                    <td>Счет № {{ $invoice->invoice_number }}</td>
+                    <td>{{ $invoice->invoice_number }}</td>
+
+                    <td>{{ $invoiceStatuses->get('name') }}</td>
+
                     <td>{{ $invoice->invoice_date }}</td>
                     <td>{{ $invoice->pay_due_date }}</td>
                     <td>{{ $invoice->terms }}</td>
