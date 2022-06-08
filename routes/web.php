@@ -67,6 +67,8 @@ Route::group(['namespace' => 'Payment'], function () {
     Route::get('/payments/{payment}/edit', 'EditController')->name('payment.edit');
     Route::patch('/payments/{payment}', 'UpdateController')->name('payment.update');
     Route::delete('/payments/{payment}', 'DestroyController')->name('payment.delete');
+    //Get payment only for selected client
+    Route::get('/payments/clients/{client?}','ShowWithClientsController')->name('payment.show_with_clients');
 });
 
 //// Include static app constants /app/Constants.php

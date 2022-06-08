@@ -13,7 +13,10 @@ class ShowWithClientsController extends BaseController
   public function __invoke(InvoiceDataTable $dataTable,Client $client)
   {
 
-    $invoices = Invoice::whereBelongsTo($client)->get();
+    $invoices = Invoice::all();
+
+    $dataTable->addClient($client);
+
     return $dataTable->render('invoice.index', compact('invoices'));
   }
 }
