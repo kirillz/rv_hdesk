@@ -12,14 +12,14 @@ use Yajra\DataTables\Services\DataTable;
 
 class InvoiceDataTable extends DataTable
 {
-  private ?Client $client = null;
+    private ?Client $client = null;
 
-  /**
-     * Build DataTable class.
-     *
-     * @param mixed $query Results from query() method.
-     * @return \Yajra\DataTables\DataTableAbstract
-     */
+    /**
+       * Build DataTable class.
+       *
+       * @param mixed $query Results from query() method.
+       * @return \Yajra\DataTables\DataTableAbstract
+       */
     public function dataTable($query)
     {
         return datatables()
@@ -38,10 +38,8 @@ class InvoiceDataTable extends DataTable
      */
     public function query(Invoice $model): \Illuminate\Database\Eloquent\Builder
     {
-
-        if ($this->client)
-        {
-          return $model->whereBelongsTo($this->client)->newQuery();
+        if ($this->client) {
+            return $model->whereBelongsTo($this->client)->newQuery();
         }
         return $model->newQuery();
     }
@@ -92,22 +90,22 @@ class InvoiceDataTable extends DataTable
         ];
     }
 
-  /**
-   * Retrieves Client model to filter invoices if needed
-   *
-   * @param Client $client
-   * @return void
-   */
-  public function addClient(Client $client)
-  {
-      $this->client = $client;
-  }
-
-  /**
-     * Get filename for export.
+    /**
+     * Retrieves Client model to filter invoices if needed
      *
-     * @return string
+     * @param Client $client
+     * @return void
      */
+    public function addClient(Client $client)
+    {
+        $this->client = $client;
+    }
+
+    /**
+       * Get filename for export.
+       *
+       * @return string
+       */
     protected function filename(): string
     {
         return 'Invoice_' . date('dmY');
