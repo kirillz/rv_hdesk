@@ -40,6 +40,7 @@ class CreateInvoicesTable extends Migration
 
 
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->foreign('invoice_status_id', 'invoice_status_fk')->on('invoice_statuses')->references('id')->onDelete('cascade');
             //$table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 

@@ -16,4 +16,17 @@ class Service
     {
         $task->update($data);
     }
+    public function getTasksSum()
+    {
+        $task = Task::all();
+        return $task->count();
+    }
+    public function getTasksUnstarted()
+    {
+        return DB::table('tasks')->whereIn('task_end_date', [0])->count();
+    }
+    public function getTasksFinished()
+    {
+        return DB::table('tasks')->where('task_end_date', '>', 0)->count();
+    }
 }

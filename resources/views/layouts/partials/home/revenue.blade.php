@@ -57,12 +57,12 @@
                                                  style="width:38px; margin-top: 5px; padding-right:8px;"></i>Всего: {{ $invoicesCount }}
             </div>
             <div class="in-bold-left in-thin"><i class="fa fa-clipboard-check"
-                                                 style="width:38px; margin-top: 5px; padding-right:8px;"></i>Оплачено:
-              0
+                                                 style="width:38px; margin-top: 5px; padding-right:8px;"></i>Одобрено:
+              {{ $invoiceStatusApproved }}
             </div>
             <div class="in-bold-left in-thin"><i class="fa fa-close"
                                                  style="width:38px; margin-top: 5px; padding-right:8px;"></i>
-              Неоплачено: 0
+              Неоплачено: {{ $invoiceStatusUnpaid }}
             </div>
             <hr class="hr-primary mt-0 mb-2">
             <div class="in-thin">
@@ -70,15 +70,15 @@
             </div>
 
             <div class="in-bold-left in-thin"><i class="fa fa-list"
-                                                 style="width:38px; margin-top: 5px; padding-right:8px;"></i>Всего: 0
+                                                 style="width:38px; margin-top: 5px; padding-right:8px;"></i>Всего: {{ $getTasksSum }}
             </div>
             <div class="in-bold-left in-thin"><i class="fa-solid fa-list-check"
                                                  style="width:38px; margin-top: 5px; padding-right:8px;"></i>Выполнено:
-              0
+              {{ $getTasksFinished }}
             </div>
             <div class="in-bold-left in-thin"><i class="fa-solid fa-close"
-                                                 style="width:38px; margin-top: 5px; padding-right:8px;"></i>Не выполнено:
-              0
+                                                 style="width:38px; margin-top: 5px; padding-right:8px;"></i>Не начата:
+              {{ $getTasksUnstarted }}
             </div>
             <hr class="hr-primary mt-0 mb-2">
           </div>
