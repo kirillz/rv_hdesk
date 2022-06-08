@@ -39,6 +39,10 @@ Route::group(['namespace' => 'Invoice'], function () {
     Route::get('/invoices/{invoice}/edit', 'EditController')->name('invoice.edit');
     Route::patch('/invoices/{invoice}', 'UpdateController')->name('invoice.update');
     Route::delete('/invoices/{invoice}', 'DestroyController')->name('invoice.delete');
+    //Get invoices only for a selected client
+    Route::get('/invoices/clients/{client?}','ShowWithClientsController')->name('invoice.show_with_clients');
+
+
 });
 
 // Tasks CRUD
@@ -63,6 +67,8 @@ Route::group(['namespace' => 'Payment'], function () {
     Route::get('/payments/{payment}/edit', 'EditController')->name('payment.edit');
     Route::patch('/payments/{payment}', 'UpdateController')->name('payment.update');
     Route::delete('/payments/{payment}', 'DestroyController')->name('payment.delete');
+    //Get payment only for selected client
+    Route::get('/payments/clients/{client?}','ShowWithClientsController')->name('payment.show_with_clients');
 });
 
 //// Include static app constants /app/Constants.php
