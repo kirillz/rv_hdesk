@@ -10,13 +10,12 @@ use Illuminate\Routing\Controller;
 
 class ShowWithClientsController extends BaseController
 {
-  public function __invoke(InvoiceDataTable $dataTable,Client $client)
-  {
+    public function __invoke(InvoiceDataTable $dataTable, Client $client)
+    {
+        $invoices = Invoice::all();
 
-    $invoices = Invoice::all();
+        $dataTable->addClient($client);
 
-    $dataTable->addClient($client);
-
-    return $dataTable->render('invoice.index', compact('invoices'));
-  }
+        return $dataTable->render('invoice.index', compact('invoices'));
+    }
 }

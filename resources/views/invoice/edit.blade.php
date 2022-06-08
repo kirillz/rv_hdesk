@@ -9,11 +9,11 @@
             <form action="{{ route('invoice.update', $invoice->id) }}" method="post" class="row g-3">
                 @csrf
                 @method('patch')
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <label for="invoice_number" class="form-label">Номер счета</label>
                     <input type="text" name="invoice_number" value="{{ $invoice->invoice_number }}" class="form-control" id="invoice_number" placeholder="Номер счета">
                 </div>
-              <div class="col-md-6">
+              <div class="col-md-3">
                 <label for="invoice_status_id" class="form-label">Статус счета</label>
                 <select class="form-control form-select" id="invoice_status_id">
                   <option selected>Выберите статус счета</option>
@@ -24,7 +24,7 @@
               </div>
                 <div class="col-md-3">
                     <label for="invoice_date" class="form-label">Дата создания</label>
-                    <input type="text" name="invoice_date" value="{{ $invoice->invoice_date }}" class="form-control" id="invoice_date" placeholder="Дата создания">
+                    <input type="text" name="invoice_date" value="{{ $invoice->invoice_date }}" class="form-control" id="invoice_date"  disabled placeholder="Дата создания">
                 </div>
                 <div class="col-md-3">
                     <label for="pay_due_date" class="form-label">Жел Дата оплаты</label>
@@ -62,6 +62,10 @@
                     <label for="balance" class="form-label">Остаток средств</label>
                     <input type="text" name="balance" value="{{ $invoice->balance }}" class="form-control" id="balance" placeholder="Остаток средств">
                 </div>
+              <div class="col-md-3">
+                <label for="discount" class="form-label">Скидка %</label>
+                <input type="text" name="discount" value="{{ $invoice->discount }}" class="form-control" id="discount" placeholder="Скидка">
+              </div>
                 <div class="col-3">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="{{ $invoice->is_deleted }}" id="is_deleted">

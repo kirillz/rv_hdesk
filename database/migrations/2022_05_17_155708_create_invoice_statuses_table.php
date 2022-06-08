@@ -16,6 +16,7 @@ class CreateInvoiceStatusesTable extends Migration
         Schema::create('invoice_statuses', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+
         });
     }
 
@@ -26,7 +27,6 @@ class CreateInvoiceStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('invoice_statuses');
     }
 }
