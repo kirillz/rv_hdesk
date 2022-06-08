@@ -31,12 +31,10 @@ class Service
     {
         return DB::table('invoices')->count();
     }
-
     public function getApprovedSum(): int
     {
         return DB::table('invoices')->whereIn('invoice_status_id', [4])->count();
     }
-
     public function getUnpaidSum(): int
     {
         return DB::table('invoices')->whereIn('invoice_status_id', [-2])->count();

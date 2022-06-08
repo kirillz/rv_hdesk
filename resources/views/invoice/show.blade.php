@@ -22,9 +22,8 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Номер счета</th>
-
                     <th scope="col">Статус счета</th>
-
+                    <th scope="col">Скидка %</th>
                     <th scope="col">Создан</th>
                     <th scope="col">Жел Дата оплаты</th>
                     <th scope="col">Условия оплаты</th>
@@ -42,9 +41,8 @@
                 <tr>
                     <td>{{ $invoice->id }}</td>
                     <td>{{ $invoice->invoice_number }}</td>
-
                     <td>{{ $invoiceStatuses->get('name') }}</td>
-
+                    <td>{{ $invoice->discount }}</td>
                     <td>{{ $invoice->invoice_date }}</td>
                     <td>{{ $invoice->pay_due_date }}</td>
                     <td>{{ $invoice->terms }}</td>
