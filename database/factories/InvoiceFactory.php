@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Client;
 use App\Models\Invoice;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -14,11 +15,12 @@ class InvoiceFactory extends Factory
      */
     public function definition()
     {
-        $invoiceIds = Invoice::all()->pluck('id')->toArray();
+        $invoiceIds = Client::all()->pluck('id')->toArray();
 
         return [
             'client_id' => $this->faker->randomElement($invoiceIds),
             'invoice_number' => $this->faker->numberBetween(0, 999999),
+            'invoice_status_id' => '1',
             'discount' => $this->faker->numberBetween(0, 10),
             'terms' => $this->faker->sentence(4, true),
             'public_notes' => $this->faker->sentence(4, true),

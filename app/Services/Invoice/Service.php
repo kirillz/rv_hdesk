@@ -4,6 +4,7 @@ namespace App\Services\Invoice;
 
 use App\Models\Invoice;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 
 class Service
 {
@@ -25,8 +26,12 @@ class Service
         return DB::table('invoices')
         ->avg('balance');
     }
-    public function getInvoicesCount()
+    public function getInvoicesCount(): int
     {
         return DB::table('invoices')->count();
+    }
+    public function getStatusNameById($id)
+    {
+        return DB::table('invoice_statuses')->where('id', $id)->first();
     }
 }

@@ -20,6 +20,18 @@
                     <label for="invoice_number" class="form-label">Номер счета</label>
                     <input type="text" name="invoice_number" class="form-control" id="invoice_number" placeholder="Номер счета">
                 </div>
+              <div class="col-md-6">
+                <label for="invoice_status_id" class="form-label">Статус счета</label>
+                <select class="form-control form-select" id="invoice_status_id" name="invoice_status_id">
+                  <option selected>Выберите статус счета...</option>
+                  @foreach($invoiceStatuses as $invoiceStatus)
+                    // FIXME: по умолчанию должно стоять значение "draft", см Constants.php INVOICE_STATUS_DRAFT
+                    <option
+                      value="{{ $invoiceStatus->id }}">{{ $invoiceStatus->name }}</option>
+                  @endforeach
+                </select>
+{{--                <input type="text" name="invoice_status_id" class="form-control" id="invoice_status_id" placeholder="Статус счета">--}}
+              </div>
                 <div class="col-md-3">
                     <label for="invoice_date" class="form-label">Дата создания</label>
                     <input type="text" name="invoice_date" class="form-control" id="invoice_date" placeholder="Дата создания">
@@ -97,3 +109,5 @@
         </div>
     </div>
 @endsection
+
+

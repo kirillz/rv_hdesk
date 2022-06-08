@@ -12,7 +12,9 @@ use Yajra\DataTables\Services\DataTable;
 
 class InvoiceDataTable extends DataTable
 {
-    /**
+  private ?Client $client = null;
+
+  /**
      * Build DataTable class.
      *
      * @param mixed $query Results from query() method.
@@ -36,6 +38,11 @@ class InvoiceDataTable extends DataTable
      */
     public function query(Invoice $model): \Illuminate\Database\Eloquent\Builder
     {
+
+        if ($this->client)
+        {
+          return $model->whereBelongsTo($this->client)->newQuery();
+        }
         return $model->newQuery();
     }
 
@@ -77,6 +84,7 @@ class InvoiceDataTable extends DataTable
                   ->addClass('text-center'),
             //Column::make('id'),
             Column::make('invoice_number')->title('№ Счета'),
+            Column::make('invoice_status_id')->title('Статус'),
             Column::make('discount')->title('Скидка(%)'),
             Column::make('invoice_date')->title('Дата создания'),
             Column::make('amount')->title('Сумма счетов'),
@@ -84,7 +92,18 @@ class InvoiceDataTable extends DataTable
         ];
     }
 
-    /**
+  /**
+   * Retrieves Client model to filter invoices if needed
+   *
+   * @param Client $client
+   * @return void
+   */
+  public function addClient(Client $client)
+  {
+      $this->client = $client;
+  }
+
+  /**
      * Get filename for export.
      *
      * @return string

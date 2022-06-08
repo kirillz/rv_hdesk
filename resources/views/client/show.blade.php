@@ -64,8 +64,8 @@
 {{--          {!! Form::tab_link('#recurring_invoices', trans('texts.recurring')) !!}--}}
 {{--        @endif--}}
         <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Активность</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Счета</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Оплаты</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href='{{ route('invoice.show_with_clients', $client) }}'>Счета</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="{{ route('payment.show_with_clients', $client) }}">Оплаты</a>
         <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
       </nav>
     </div>

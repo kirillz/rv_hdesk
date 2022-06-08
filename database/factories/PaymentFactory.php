@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Client;
 use App\Models\Payment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -14,9 +15,9 @@ class PaymentFactory extends Factory
      */
     public function definition()
     {
-        $paymentIds = Payment::all()->pluck('id')->toArray();
+        $clientIds = Client::all()->pluck('id')->toArray();
         return [
-      'client_id' => $this->faker->randomElement($paymentIds),
+      'client_id' => $this->faker->randomElement($clientIds),
       'invoice_id' => $this->faker->numberBetween(0, 999999),
       'amount' => $this->faker->numberBetween(0, 10000),
       'payment_date' => $this->faker->dateTimeInInterval('now', '+3 week', 'Europe/Moscow'),

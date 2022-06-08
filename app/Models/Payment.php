@@ -17,7 +17,7 @@ class Payment extends Model
 
     public function client(): mixed
     {
-        return $this->belongsTo('client');
+        return $this->belongsTo(Client::class);
     }
     public function invoice(): mixed
     {

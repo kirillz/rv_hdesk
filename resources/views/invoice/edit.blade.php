@@ -13,6 +13,15 @@
                     <label for="invoice_number" class="form-label">Номер счета</label>
                     <input type="text" name="invoice_number" value="{{ $invoice->invoice_number }}" class="form-control" id="invoice_number" placeholder="Номер счета">
                 </div>
+              <div class="col-md-6">
+                <label for="invoice_status_id" class="form-label">Статус счета</label>
+                <select class="form-control form-select" id="invoice_status_id">
+                  <option selected>Выберите статус счета</option>
+                  @foreach($invoiceStatuses as $invoiceStatus)
+                    <option value="{{ $invoiceStatus->id }}">{{ $invoiceStatus->name }}</option>
+                  @endforeach
+                </select>
+              </div>
                 <div class="col-md-3">
                     <label for="invoice_date" class="form-label">Дата создания</label>
                     <input type="text" name="invoice_date" value="{{ $invoice->invoice_date }}" class="form-control" id="invoice_date" placeholder="Дата создания">
