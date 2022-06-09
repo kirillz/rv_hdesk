@@ -1,5 +1,15 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+$fa-font-path: "../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// DataTables
+@import "~datatables.net-bs5/css/dataTables.bootstrap5.css";
+@import "~datatables.net-buttons-bs5/css/buttons.bootstrap5.css";
 
 // Variables
 @import 'variables';
@@ -10,15 +20,6 @@
 @import 'dashboard';
 
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
-// DataTables
-@import "~datatables.net-bs5/css/dataTables.bootstrap5.css";
-@import "~datatables.net-buttons-bs5/css/buttons.bootstrap5.css";
 
-$fa-font-path:        "../webfonts";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-@import "~@fortawesome/fontawesome-free/scss/regular";
+
