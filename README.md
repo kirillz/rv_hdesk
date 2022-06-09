@@ -51,5 +51,3 @@ Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-ba
 * ~~ВКонтакте~~
 * ~~ФейсБуки~~
 * Telegram: [@kirillZ](https://t.me/kirillZ)  
-
-<a href='https://ko-fi.com/T6T7D6E6R' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee' /></a>
