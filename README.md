@@ -50,4 +50,3 @@ Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-ba
 * ~~ВКонтакте~~
 * ~~ФейсБуки~~
 * Telegram: [@kirillZ](https://t.me/kirillZ)
-* <a href="https://www.patreon.com/kirillz"><img src="/images/badges/Patreon-Badge.svg" alt="Become a patron"></a>
