@@ -13,6 +13,14 @@ The idea behind the app is to keep track of clients and jobs for a self-employed
 
 ![2022-06-09_142703](https://user-images.githubusercontent.com/1161809/172836433-43ac1bea-6d99-4946-9bb0-191db320d0a1.png)
 
+### Features  
+- [ ] Dashboard with graphical information
+- [x] Clients
+- [x] Invoices
+- [x] Tasks
+- [x] Payments
+- [ ] Contacts
+- [ ] Taxes
 
 ### Requirements
 * PHP 8.1
