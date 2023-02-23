@@ -58,4 +58,4 @@ Made with  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-ba
 ## :envelope: Contacts
 * ~~ВКонтакте~~
 * ~~ФейсБуки~~
-* Telegram: [@kirillZ](https://t.me/kirillZ)  
+* Telegram: [@kirill5488](https://t.me/kirill5488)  
